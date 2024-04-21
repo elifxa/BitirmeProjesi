@@ -5,26 +5,21 @@ import { FileUpload } from 'primereact/fileupload';
 
 export default function Dropbox({ onUploadSuccess }) {
   const [uploadedImages, setUploadedImages] = useState([]);
-
   const handleFileUpload = (event) => {
     const files = event.files;
     const newUploadedImages = [...uploadedImages];
-
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
       const reader = new FileReader();
-
       reader.onload = (e) => {
         const uploadedImageUrl = e.target.result;
         newUploadedImages.push(uploadedImageUrl);
         setUploadedImages(newUploadedImages);
         onUploadSuccess(newUploadedImages);
       };
-
       reader.readAsDataURL(file);
     }
   };
-
   return (
     <div className="grid grid-cols-6 gap-4">
       <div className="col-start-2 col-span-4 ...">

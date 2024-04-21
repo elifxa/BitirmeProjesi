@@ -1,0 +1,19 @@
+.box {
+  background-color: #f0f0d2;
+  color: #000000;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.1);
+
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}

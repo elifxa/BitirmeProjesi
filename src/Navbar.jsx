@@ -6,7 +6,7 @@ import { Menubar } from 'primereact/menubar';
 
 import Hero from './Hero';
 import Dropbox from './Dropbox';
-import InfoPage from './infoPage';
+import SolarPanelinfo from './SolarPanelinfo';
 import AboutPage from './aboutPage';
 import ContactPage from './contactPage';
 
@@ -39,31 +39,39 @@ export default function Navbar() {
     },
   ];
 
-  const logoElement = (
-    <img
-      src="https://st3.depositphotos.com/30226412/32944/v/450/depositphotos_329445992-stock-illustration-initial-letter-sp-or-ps.jpg"
-      alt="Logo"
-      style={{
-        height: '60px',
-        marginRight: '30px',
-        mixBlendMode: 'color-burn',
-      }}
-    />
-  );
+  // const logoElement = (
+  //   <img
+  //     src="https://st3.depositphotos.com/30226412/32944/v/450/depositphotos_329445992-stock-illustration-initial-letter-sp-or-ps.jpg"
+  //     alt="Logo"
+  //     style={{
+  //       height: '60px',
+  //       marginRight: '30px',
+  //       mixBlendMode: 'color-burn',
+  //     }}
+  //   />
+  // );
+
+  const menuStyle = {
+    background: '#222',
+    color: '#fff',
+    border: '0',
+    display: 'flex',
+    justifyContent: 'flex-end',
+  };
 
   return (
     <>
-      <div style={{ color: 'black ' }}>
+      <div>
         <Menubar
           model={items}
-          start={logoElement}
+          style={menuStyle} // Apply the custom styles
           end={<div style={{ marginLeft: 'auto' }}></div>}
         />
-      </div>{' '}
+      </div>
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/use-project" element={<Dropbox />} />
-        <Route path="/solar-panels" element={<InfoPage />} />
+        <Route path="/solar-panels" element={<SolarPanelinfo />} />
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
