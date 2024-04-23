@@ -14,7 +14,6 @@ function TableOfContents() {
         'section6',
         'section7',
         'section8',
-        'section9',
       ];
       const scrollPosition = window.scrollY;
 
@@ -42,7 +41,7 @@ function TableOfContents() {
   };
 
   return (
-    <div className="sticky top-20 ml-4 z-10 mt-2">
+    <div className="sticky top-20 ml-6 z-10 mt-6">
       <h2 className="font-bold text-2xl">TABLE OF CONTENTS</h2>
       <ul className="mt-6 space-y-2 list-none flex flex-col gap-5">
         <li className="flex-1">
@@ -55,7 +54,7 @@ function TableOfContents() {
             }`}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
+              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
                 isSectionActive('section1') ? 'bg-[#800080]' : ''
               }`}
             ></span>
@@ -72,7 +71,7 @@ function TableOfContents() {
             }`}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
+              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
                 isSectionActive('section2') ? 'bg-[#800080]' : ''
               }`}
             ></span>
@@ -89,7 +88,7 @@ function TableOfContents() {
             }`}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
+              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
                 isSectionActive('section3') ? 'bg-[#800080]' : ''
               }`}
             ></span>
@@ -106,7 +105,7 @@ function TableOfContents() {
             }`}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
+              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
                 isSectionActive('section4') ? 'bg-[#800080]' : ''
               }`}
             ></span>
@@ -123,7 +122,7 @@ function TableOfContents() {
             }`}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
+              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
                 isSectionActive('section5') ? 'bg-[#800080]' : ''
               }`}
             ></span>
@@ -140,7 +139,7 @@ function TableOfContents() {
             }`}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
+              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
                 isSectionActive('section6') ? 'bg-[#800080]' : ''
               }`}
             ></span>
@@ -157,7 +156,7 @@ function TableOfContents() {
             }`}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
+              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
                 isSectionActive('section7') ? 'bg-[#800080]' : ''
               }`}
             ></span>
@@ -175,26 +174,8 @@ function TableOfContents() {
             }`}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
+              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
                 isSectionActive('section8') ? 'bg-[#800080]' : ''
-              }`}
-            ></span>
-            Solar panel installation
-          </a>
-        </li>
-
-        <li className="flex-1">
-          <a
-            href="#section9"
-            className={`text-xl block flex items-center ${
-              isSectionActive('section9')
-                ? 'text-black font-medium '
-                : 'text-gray-500'
-            }`}
-          >
-            <span
-              className={`h-2 w-2 mr-2 rounded-full border border-gray-500 ${
-                isSectionActive('section9') ? 'bg-[#800080]' : ''
               }`}
             ></span>
             The Future of Solar Panels

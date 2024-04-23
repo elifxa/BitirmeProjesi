@@ -1,6 +1,7 @@
 import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
 import 'primeicons/primeicons.css';
 
+// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Menubar } from 'primereact/menubar';
 
@@ -42,15 +43,13 @@ export default function Navbar() {
     background: '#222',
     color: '#fff',
     border: '0',
-    display: 'flex',
-    justifyContent: 'center',
   };
 
   return (
     <>
       <div
         style={{
-          position: 'sticky',
+          position: 'fixed',
           width: '100%',
           zIndex: '1000',
           top: '0',
@@ -63,6 +62,7 @@ export default function Navbar() {
           end={<div style={{ marginLeft: 'auto' }}></div>}
         />
       </div>
+
       <Routes>
         <Route path="/" index element={<Hero />} />
         <Route path="/use-project" element={<Dropbox />} />

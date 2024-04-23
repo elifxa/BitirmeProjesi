@@ -3,9 +3,11 @@ import Navbar from './Navbar';
 
 function App() {
   return (
-    <>
-      <Navbar />
-    </>
+    <div>
+      <div style={{ paddingTop: '48px' }}>
+        <Navbar />
+      </div>
+    </div>
   );
 }
 

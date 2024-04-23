@@ -10,17 +10,19 @@ export default function SolarPanelinfo() {
           alt="Description of the image"
           className="absolute inset-0 w-full h-full object-cover brightness-[0.30] shadow-lg"
         />
-        <p className="absolute bottom-2 left-8 p-8 text-white text-6xl">
-          Everything You Need to Know!
-        </p>
+
+        <div className="absolute bottom-2 left-8 p-8 text-[#fef3c7] ">
+          <h1 className="text-6xl">Solar Panels</h1>
+          <h2 className="text-3xl">Everything You Need to Know!</h2>
+        </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 md:mx-auto md:mt-4 lg:mt-4">
-        <div className="col-span-3 overflow-auto">
-          <InfoPage />
-        </div>
-        <div className="col-span-1 ">
+      <div className="md:flex md:flex-row-reverse">
+        <div className="md:w-1/4">
           <TableOfContents />
+        </div>
+        <div className="md:flex-1 overflow-auto">
+          <InfoPage />
         </div>
       </div>
     </div>

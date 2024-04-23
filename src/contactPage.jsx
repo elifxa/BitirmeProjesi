@@ -1,7 +1,7 @@
 function contactPage() {
   return (
     <>
-      <div>contact</div>
+      <div className="mt-8">contact</div>
     </>
   );
 }

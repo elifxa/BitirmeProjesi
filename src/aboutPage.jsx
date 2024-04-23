@@ -1,7 +1,7 @@
 function aboutPage() {
   return (
     <>
-      <div>about</div>
+      <div className="mt-8">about</div>
     </>
   );
 }
