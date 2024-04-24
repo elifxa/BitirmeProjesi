@@ -40,8 +40,18 @@ function TableOfContents() {
     return sectionId === activeSection;
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
-    <div className="sticky top-20 ml-6 z-10 mt-6">
+    <div className="sticky top-20 ml-6 z-10 mt-4">
       <h2 className="font-bold text-2xl">TABLE OF CONTENTS</h2>
       <ul className="mt-6 space-y-2 list-none flex flex-col gap-5">
         <li className="flex-1">
@@ -52,6 +62,10 @@ function TableOfContents() {
                 ? 'text-black font-medium '
                 : 'text-gray-500'
             }`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              scrollToSection('section1');
+            }}
           >
             <span
               className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
@@ -69,6 +83,10 @@ function TableOfContents() {
                 ? 'text-black font-medium'
                 : 'text-gray-500'
             }`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              scrollToSection('section2');
+            }}
           >
             <span
               className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
@@ -86,6 +104,10 @@ function TableOfContents() {
                 ? 'text-black font-medium'
                 : 'text-gray-500'
             }`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              scrollToSection('section3');
+            }}
           >
             <span
               className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
@@ -103,6 +125,10 @@ function TableOfContents() {
                 ? 'text-black font-medium'
                 : 'text-gray-500'
             }`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              scrollToSection('section4');
+            }}
           >
             <span
               className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
@@ -120,6 +146,10 @@ function TableOfContents() {
                 ? 'text-black font-medium'
                 : 'text-gray-500'
             }`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              scrollToSection('section5');
+            }}
           >
             <span
               className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
@@ -137,6 +167,10 @@ function TableOfContents() {
                 ? 'text-black font-medium'
                 : 'text-gray-500'
             }`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              scrollToSection('section6');
+            }}
           >
             <span
               className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
@@ -154,6 +188,10 @@ function TableOfContents() {
                 ? 'text-black font-medium'
                 : 'text-gray-500'
             }`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              scrollToSection('section7');
+            }}
           >
             <span
               className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
@@ -172,6 +210,10 @@ function TableOfContents() {
                 ? 'text-black font-medium '
                 : 'text-gray-500'
             }`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default anchor behavior
+              scrollToSection('section8');
+            }}
           >
             <span
               className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${

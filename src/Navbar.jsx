@@ -8,7 +8,7 @@ import { Menubar } from 'primereact/menubar';
 import Hero from './Hero';
 import Dropbox from './Dropbox';
 import SolarPanelinfo from './SolarPanelinfo';
-import AboutPage from './aboutPage';
+import AboutUs from './aboutUs';
 import ContactPage from './contactPage';
 export default function Navbar() {
   const items = [
@@ -40,7 +40,7 @@ export default function Navbar() {
   ];
 
   const menuStyle = {
-    background: '#222',
+    background: '#111',
     color: '#fff',
     border: '0',
   };
@@ -54,6 +54,9 @@ export default function Navbar() {
           zIndex: '1000',
           top: '0',
           left: '0',
+          display: 'flex', //flexbox
+          justifyContent: 'center', // Center items horizontally
+          backgroundColor: '#111',
         }}
       >
         <Menubar
@@ -62,11 +65,10 @@ export default function Navbar() {
           end={<div style={{ marginLeft: 'auto' }}></div>}
         />
       </div>
-
       <Routes>
         <Route path="/" index element={<Hero />} />
         <Route path="/use-project" element={<Dropbox />} />
-        <Route path="/about-us" element={<AboutPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/solar-panels" element={<SolarPanelinfo />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>

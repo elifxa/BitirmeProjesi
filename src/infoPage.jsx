@@ -9,7 +9,7 @@ export default function InfoPage() {
     <div>
       <div>
         <div id="section1" className="box">
-          <p className="pt-2 pb-6 text-base">
+          <p className="pt-2 pb-6 text-lg">
             <strong>Solar panels</strong> , also known as photovoltaic (PV)
             panels, are devices that convert sunlight into electricity. They are
             made up of multiple solar cells, which are typically made from
@@ -36,20 +36,20 @@ export default function InfoPage() {
 
         <div id="section2" className="box ">
           <h2 className="text-4xl font-bold ">How Do Solar Panels Work?</h2>
-          <p className="pt-6 text-base">
+          <p className="pt-6 text-lg">
             Solar panels work by harnessing the energy from sunlight and
             converting it into electricity through a process called the
             photovoltaic effect. Here is a simplified explanation of how this
             process works:
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Absorption of sunlight: </strong>Solar panels are made up of
             numerous solar cells, typically made from silicon-based materials.
             These cells have two layers: a positively charged layer and a
             negatively charged layer. When sunlight hits the solar panel, it is
             absorbed by the silicon material.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Generation of electric current:</strong> When sunlight is
             absorbed by the silicon material, it excites the electrons in the
             material, causing them to move. This movement of electrons creates
@@ -61,7 +61,7 @@ export default function InfoPage() {
             device called an inverter, which is typically installed alongside
             the solar panels.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Utilization or storage of electricity:</strong> The AC
             electricity produced by the solar panels can now be used to power
             electrical devices, appliances, lighting, and other electrical loads
@@ -73,7 +73,7 @@ export default function InfoPage() {
 
         <div id="section3" className="box">
           <h2 className="text-4xl font-bold">Solar panel installation</h2>
-          <p className="pt-6 text-base">
+          <p className="pt-6 text-lg">
             Most residential solar arrays are installed by a professional.
             Installing solar panels yourself is technically possible, but you
             run the risk of voiding warranties. You should only attempt it if
@@ -93,7 +93,7 @@ export default function InfoPage() {
               style={{ maxWidth: '100%' }}
             />
           </div>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             A reputable solar installer will advise you on the age of your roof
             before installation. Replacing your roof before installation may
             ultimately be the cheaper option, since removing the panels to
@@ -105,14 +105,14 @@ export default function InfoPage() {
           <h2 className="text-4xl font-bold">
             Care and lifespan of solar panels
           </h2>
-          <p className="pt-6 text-base">
+          <p className="pt-6 text-lg">
             Many solar panels are warrantied to last 25 years, though their
             useful life is likely longer. On top of that, they are fairly
             maintenance-free, just requiring that you keep them free of
             obstructions like dirt, leaves and snow. More extensive repairs may
             be covered by warranty.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             Solar panels become less efficient over time, though that downward
             trend is not necessarily a problem for you. A typical manufacturer
             has warranty will guarantee that your solar panels will not lose
@@ -129,38 +129,38 @@ export default function InfoPage() {
           <h2 className="text-4xl font-bold">
             Causes of Deterioration of Solar Panels
           </h2>
-          <p className="pt-6 text-base">
+          <p className="pt-6 text-lg">
             The deterioration of solar panels can occur due to various factors,
             including:
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Exposure to environmental elements:</strong> Solar panels
             are exposed to harsh environmental conditions such as sunlight,
             rain, wind, hail, snow, and temperature fluctuations. Over time,
             prolonged exposure to these elements can lead to degradation of the
             panel materials, including the glass, frame, and encapsulant.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong> UV radiation:</strong> Solar panels are exposed to
             ultraviolet (UV) radiation from sunlight, which can cause
             degradation of the materials used in the solar cells and the
             encapsulant. This can result in a decrease in the efficiency of the
             solar panels over time.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Dust and dirt accumulation: </strong> Dust, dirt, and other
             particles can accumulate on the surface of solar panels, reducing
             the amount of sunlight that reaches the solar cells and decreasing
             the efficiency of the panels. Regular cleaning is necessary to
             maintain optimal performance.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong> Mechanical stress:</strong> Mechanical stress from factors
             such as wind, hail, or improper installation can damage the solar
             panels or their components, leading to reduced efficiency or
             failure.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Temperature variations:</strong> Solar panels are designed
             to operate within a certain temperature range, and extreme
             temperatures can affect their performance. High temperatures can
@@ -197,18 +197,18 @@ export default function InfoPage() {
 
         <div id="section6" className="box">
           <h2 className="text-4xl font-bold">Advantages of Solar Panels</h2>
-          <p className="pt-6 text-base">
+          <p className="pt-6 text-lg">
             Solar panels offer numerous advantages, making them a popular choice
             for renewable energy generation. Here are some key advantages:
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Clean and Renewable Energy Source:</strong> Solar panels
             harness sunlight, a virtually limitless and renewable energy source.
             Unlike fossil fuels, solar energy production does not release
             harmful greenhouse gases or pollutants, contributing to a cleaner
             environment and mitigating climate change.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Reduced Electricity Bills:</strong> By generating
             electricity from sunlight, solar panels can significantly reduce or
             even eliminate dependence on traditional grid-supplied electricity.
@@ -216,14 +216,14 @@ export default function InfoPage() {
             lifespan of the solar panel system, especially in areas with high
             electricity rates or ample sunlight.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Low Operating Costs:</strong> Once installed, solar panels
             have minimal operating and maintenance costs. They require
             occasional cleaning and inspection to ensure optimal performance but
             do not incur fuel costs or ongoing expenses associated with
             traditional energy sources.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Scalability and Flexibility:</strong> Solar panel systems
             can be tailored to meet diverse energy needs, ranging from small
             residential installations to large-scale utility projects. They can
@@ -231,7 +231,7 @@ export default function InfoPage() {
             offering flexibility and scalability to accommodate changing energy
             demands.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Environmental Benefits: </strong>Solar energy production
             helps reduce air and water pollution, conserve natural resources,
             and protect ecosystems. By displacing fossil fuel consumption, solar
@@ -243,12 +243,12 @@ export default function InfoPage() {
 
         <div id="section7" className="box ">
           <h2 className="text-4xl font-bold ">Solar Panel Applications</h2>
-          <p className="pt-6 text-base">
+          <p className="pt-6 text-lg">
             Solar panels have diverse applications across various sectors,
             harnessing sunlight to generate electricity and provide sustainable
             energy solutions. Here are some common applications:
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Residential Solar Systems:</strong> Solar panels are widely
             used on residential rooftops to generate electricity for homes.
             These systems can offset electricity bills, increase energy
@@ -257,7 +257,7 @@ export default function InfoPage() {
             battery storage, or hybrid systems that combine solar with other
             energy sources.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Utility-Scale Solar Farms:</strong> Large-scale solar farms
             or solar power plants deploy extensive arrays of solar panels to
             generate electricity for utility grids. These utility-scale
@@ -266,7 +266,7 @@ export default function InfoPage() {
             efforts. Solar farms can be ground-mounted or installed on unused
             land, providing a reliable and scalable energy source.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Off-Grid Power Systems: </strong>Solar panels are utilized
             in off-grid applications where access to traditional grid
             electricity is limited or unavailable. Off-grid solar systems, often
@@ -276,7 +276,7 @@ export default function InfoPage() {
             systems offer energy independence and resilience in remote
             locations.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Solar-Powered Vehicles and Transportation:</strong> Solar
             panels are integrated into vehicles, including cars, boats, drones,
             and satellites, to supplement onboard power systems and extend range
@@ -297,13 +297,13 @@ export default function InfoPage() {
 
         <div id="section8" className="box">
           <h2 className="text-4xl font-bold">The Future of Solar Panels</h2>
-          <p className="pt-6 text-base">
+          <p className="pt-6 text-lg">
             The future of solar panels holds promise for further advancements in
             technology, efficiency, and integration, driving increased adoption
             and broader applications. Here are some key trends and developments
             shaping the future of solar panels:
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Increased Efficiency:</strong> Research and development
             efforts continue to enhance the efficiency of solar panels,
             improving their ability to convert sunlight into electricity.
@@ -311,7 +311,7 @@ export default function InfoPage() {
             aim to boost efficiency levels, maximizing energy output while
             reducing the overall cost per watt.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong> Advanced Photovoltaic Technologies:</strong> Emerging
             photovoltaic technologies, such as perovskite solar cells, tandem
             solar cells, and thin-film solar technologies, show potential for
@@ -321,7 +321,7 @@ export default function InfoPage() {
             flexibility, and scalability, expanding the range of solar panel
             applications.
           </p>
-          <p className="pt-4 text-base">
+          <p className="pt-4 text-lg">
             <strong>Energy Storage Integration:</strong> The integration of
             energy storage solutions, such as lithium-ion batteries, with solar
             panel systems enhances grid stability, enables energy
@@ -336,7 +336,7 @@ export default function InfoPage() {
               src="https://greenhomesystems.com/wp-content/uploads/2023/09/blog-cover-photo-98.jpg"
               alt="solar panel 2"
               className="image-wrapper"
-              style={{ maxWidth: '70%' }}
+              style={{ maxWidth: '60%' }}
             />
           </div>
         </div>

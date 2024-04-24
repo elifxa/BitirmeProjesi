@@ -7,7 +7,7 @@ export default function SolarPanelinfo() {
       <div className="relative h-1/2">
         <img
           src="https://assets-global.website-files.com/60605a18185fff2ff1aa822b/60d1c120545350f0f34c309b_Gu%CC%88nes%CC%A7%20Tarlas%C4%B1.jpg"
-          alt="Description of the image"
+          alt="Lots of solar panels in sunset"
           className="absolute inset-0 w-full h-full object-cover brightness-[0.30] shadow-lg"
         />
 
