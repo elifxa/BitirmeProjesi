@@ -1,4 +1,5 @@
 import AboutPage from './aboutPage';
+import AboutProjectDetails from './aboutProjectDetails';
 
 function AboutUs() {
   const scrollToPage = () => {
@@ -37,6 +38,8 @@ function AboutUs() {
           <AboutPage />
         </div>
       </div>
+
+      <AboutProjectDetails />
     </div>
   );
 }
