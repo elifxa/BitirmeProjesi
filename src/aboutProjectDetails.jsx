@@ -3,30 +3,28 @@ import './aboutProjectDetails.css';
 function aboutProjectDetails() {
   return (
     <div className="mt-6 pt-4">
-      <div>
-        <div className="grid place-items-center p-6">
-          <div
+      <div className="grid place-items-center p-6">
+        <div
+          style={{
+            backgroundColor: '#082f49',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.5)',
+            padding: '20px 0 0 20px',
+            borderRadius: '2px',
+            maxHeight: '100px',
+            marginBottom: '30px',
+          }}
+        >
+          <h1
+            className="md:text-4xl font-medium italic text-[#082f49]"
             style={{
-              backgroundColor: '#082f49',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.5)',
-              padding: '20px 0 0 20px',
+              backgroundColor: '#f8f5e6',
+              boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.5)',
+              padding: '30px',
               borderRadius: '2px',
-              maxHeight: '100px',
-              marginBottom: '30px',
             }}
           >
-            <h1
-              className="md:text-4xl font-medium italic text-[#082f49]"
-              style={{
-                backgroundColor: '#f8f5e6',
-                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.5)',
-                padding: '30px',
-                borderRadius: '2px',
-              }}
-            >
-              What does our team do?
-            </h1>
-          </div>
+            What does our team do?
+          </h1>
         </div>
       </div>
 

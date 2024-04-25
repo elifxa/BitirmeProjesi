@@ -1,7 +1,11 @@
+import FaqPage from './faqPage';
+
 function contactPage() {
   return (
     <>
-      <div className="mt-8">contact</div>
+      <div>
+        <FaqPage />
+      </div>
     </>
   );
 }

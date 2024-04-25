@@ -39,12 +39,6 @@ export default function Navbar() {
     },
   ];
 
-  const menuStyle = {
-    background: '#111',
-    color: '#fff',
-    border: '0',
-  };
-
   return (
     <>
       <div
@@ -54,15 +48,17 @@ export default function Navbar() {
           zIndex: '1000',
           top: '0',
           left: '0',
-          display: 'flex', //flexbox
-          justifyContent: 'center', // Center items horizontally
-          backgroundColor: '#111',
+          backgroundColor: '#111 ',
         }}
       >
         <Menubar
+          className="grid lg:justify-items-center"
           model={items}
-          style={menuStyle}
-          end={<div style={{ marginLeft: 'auto' }}></div>}
+          style={{
+            backgroundColor: '#111',
+            color: '#fff',
+            width: '100%',
+          }}
         />
       </div>
       <Routes>

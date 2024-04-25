@@ -68,8 +68,8 @@ function TableOfContents() {
             }}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
-                isSectionActive('section1') ? 'bg-[#800080]' : ''
+              className={`h-2 w-2 mr-2 rounded-full border border-[#082f49] ${
+                isSectionActive('section1') ? 'bg-[#082f49]' : ''
               }`}
             ></span>
             Solar Panels
@@ -89,8 +89,8 @@ function TableOfContents() {
             }}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
-                isSectionActive('section2') ? 'bg-[#800080]' : ''
+              className={`h-2 w-2 mr-2 rounded-full border border-[#082f49] ${
+                isSectionActive('section2') ? 'bg-[#082f49]' : ''
               }`}
             ></span>
             How Do Solar Panels Work?
@@ -110,8 +110,8 @@ function TableOfContents() {
             }}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
-                isSectionActive('section3') ? 'bg-[#800080]' : ''
+              className={`h-2 w-2 mr-2 rounded-full border border-[#082f49] ${
+                isSectionActive('section3') ? 'bg-[#082f49]' : ''
               }`}
             ></span>
             Solar panel installation
@@ -131,8 +131,8 @@ function TableOfContents() {
             }}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
-                isSectionActive('section4') ? 'bg-[#800080]' : ''
+              className={`h-2 w-2 mr-2 rounded-full border border-[#082f49] ${
+                isSectionActive('section4') ? 'bg-[#082f49]' : ''
               }`}
             ></span>
             Care and lifespan of solar panels
@@ -152,8 +152,8 @@ function TableOfContents() {
             }}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
-                isSectionActive('section5') ? 'bg-[#800080]' : ''
+              className={`h-2 w-2 mr-2 rounded-full border border-[#082f49] ${
+                isSectionActive('section5') ? 'bg-[#082f49]' : ''
               }`}
             ></span>
             Causes of Deterioration of Solar Panels
@@ -173,8 +173,8 @@ function TableOfContents() {
             }}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
-                isSectionActive('section6') ? 'bg-[#800080]' : ''
+              className={`h-2 w-2 mr-2 rounded-full border border-[#082f49] ${
+                isSectionActive('section6') ? 'bg-[#082f49]' : ''
               }`}
             ></span>
             Advantages of Solar Panels
@@ -194,8 +194,8 @@ function TableOfContents() {
             }}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
-                isSectionActive('section7') ? 'bg-[#800080]' : ''
+              className={`h-2 w-2 mr-2 rounded-full border border-[#082f49] ${
+                isSectionActive('section7') ? 'bg-[#082f49]' : ''
               }`}
             ></span>
             Solar Panel Applications
@@ -216,8 +216,8 @@ function TableOfContents() {
             }}
           >
             <span
-              className={`h-2 w-2 mr-2 rounded-full border border-[#800080] ${
-                isSectionActive('section8') ? 'bg-[#800080]' : ''
+              className={`h-2 w-2 mr-2 rounded-full border border-[#082f49] ${
+                isSectionActive('section8') ? 'bg-[#082f49]' : ''
               }`}
             ></span>
             The Future of Solar Panels
