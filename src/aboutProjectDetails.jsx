@@ -31,96 +31,130 @@ function aboutProjectDetails() {
       {/*  */}
       {/*  */}
 
-      <div className="grid md:grid-cols-6 gap-4 ">
+      <div className="grid lg:grid-cols-6 gap-4 ">
         <div className="col-start-2 col-span-4">
-          <div className="grid md:grid-cols-3 gap-4 mt-11 pt-11">
-            <div className="md:col-span-2">
+          <div className="grid lg:grid-cols-3 gap-4 mt-6 pt-6">
+            <div className="lg:col-span-2 ">
               <p className="step-number">01</p>
               <h2 className="heading">Machine Learning</h2>
-              <p className="text-lg">
-                At the core of our platform are advanced machine learning
-                algorithms trained to detect hot spots in panels with precision
-                and speed. Leveraging cutting-edge techniques and extensive
-                datasets, our algorithms continuously learn and improve to
-                deliver the most accurate results possible.
-              </p>
-            </div>
-            <div>image1</div>
-          </div>
-          {/*  */}
-          <div className="grid md:grid-cols-4 gap-4 mt-6 pt-6">
-            <div>image2</div>
-            <div className="md:col-start-3 md:col-span-2">
-              <p className=" step-number">02</p>
-              <h2 className="heading">Backend</h2>
-              <p className="text-lg">
-                Behind the scenes, with powerful servers and efficient data
-                management techniques, we ensure seamless operation even during
-                peak usage. Our backend is engineered to handle large volumes of
-                data and complex computations, guaranteeing a smooth experience
-                for our users.
-              </p>
-            </div>
-          </div>
-          {/*  */}
-          <div>
-            <div className="grid md:grid-cols-3 gap-4 mt-11 pt-11">
-              <div className="md:col-span-2">
-                <p className="step-number">03</p>
-                <h2 className="heading">Frontend</h2>
+              <div className="shadow-lg  rounded-2xl  p-8 bg-[#164e63] text-white">
                 <p className="text-lg">
-                  Our frontend is designed with user-friendliness and efficiency
-                  in mind, providing you with a seamless experience as you
-                  interact with our powerful algorithms and machine learning
-                  capabilities. Here is what you can expect:
+                  At the core of our platform are advanced machine learning
+                  algorithms trained to detect hot spots in panels with
+                  precision and speed. Leveraging cutting-edge techniques and
+                  extensive datasets, our algorithms continuously learn and
+                  improve to deliver the most accurate results possible.
                 </p>
               </div>
-              <div>image3</div>
             </div>
-            <ul
-              className="grid lg:grid-cols-2 gap-8 mt-8 "
-              style={{
-                width: '100%',
-              }}
-            >
-              <div className="bg-[#083344] text-[#f8f5e6] p-8 rounded-2xl shadow-xl ">
-                <li className="list-decimal list-inside font-bold text-xl">
-                  Responsive React Framework:
+            <div className="content-center">
+              <ul className="list-inside ml-5 mt-3 pt-8">
+                <li className="p-2  list-inside font-medium text-xl">
+                  <span className="font-extrabold	">1.</span> Responsive React
+                  Framework
                 </li>
-                <p className="p-4 text-base ">
-                  Our website is built using React, a highly versatile and
-                  efficient JavaScript library for building user interfaces.
+                <li className="p-2  list-inside font-medium text-xl">
+                  <span className="font-extrabold	">2.</span> Streamlined styling
+                  with Tailwind CSS
+                </li>
+                <li className="p-2  list-inside font-medium text-xl">
+                  <span className="font-extrabold	">3.</span> Enhanced aesthetics
+                  and functionality with Material-UI (MUI) and PrimeReact
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold	">4.</span> Interactive main
+                  page for easy photo uploads and report generation
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold	">5.</span> Optimized user
+                  experience for smooth navigation
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/*  */}
+          <div className="grid lg:grid-cols-4 gap-8 mt-6 pt-6">
+            <div className="lg:col-span-2 content-center">
+              <ul className="list-inside ml-5 mt-3 pt-8">
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold">1.</span> Responsive React
+                  Framework
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold">2.</span> Streamlined styling
+                  with Tailwind CSS
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold">3.</span> Enhanced aesthetics
+                  and functionality with Material-UI(MUI) and PrimeReact
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold">4.</span> Interactive main
+                  page for easy photo uploads and report generation
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold">5.</span> Optimized user
+                  experience for smooth navigation
+                </li>
+              </ul>
+            </div>
+            <div className="lg:col-start-3 lg:col-span-2 ">
+              <p className="step-number">02</p>
+              <h2 className="heading">Backend</h2>
+              <div className="shadow-lg rounded-2xl p-8 bg-[#083344] text-white">
+                <p className="text-lg">
+                  Behind the scenes, with powerful servers and efficient data
+                  management techniques, we ensure seamless operation even
+                  during peak usage. Our backend is engineered to handle large
+                  volumes of data and complex computations, guaranteeing a
+                  smooth experience for our users.
                 </p>
               </div>
-              <div className="bg-[#155e75] text-[#f8f5e6] p-8 rounded-2xl shadow-xl">
-                <li className="list-decimal list-inside font-bold text-xl">
-                  Streamlined styling with Tailwind CSS:
-                </li>
-                <p className="p-4 text-base">
-                  We leverage the power of Tailwind CSS to streamline our
-                  styling process.
+            </div>
+          </div>
+
+          {/*  */}
+
+          <div className="grid lg:grid-cols-3 gap-4 mt-11 pt-11">
+            <div className="md:col-span-2">
+              <p className="step-number">03</p>
+              <h2 className="heading">Frontend</h2>
+              <div className="shadow-lg  rounded-2xl  p-8 bg-[#164e63] text-white">
+                <p className="text-lg">
+                  Our frontend interface is meticulously crafted with an
+                  unwavering focus on user-friendliness and efficiency, ensuring
+                  that every interaction with our platform is not just seamless,
+                  but also deeply intuitive. From the moment you engage with our
+                  interface, you will notice the careful consideration put into
+                  every element, from the layout to the smallest details of
+                  interaction.
                 </p>
               </div>
-              <div className="lg:bg-[#155e75] bg-[#083344] text-[#f8f5e6] p-8 rounded-2xl shadow-xl">
-                <li className="list-decimal list-inside font-bold text-xl">
-                  Enhanced aesthetics with Material-UI (MUI) and PrimeReact:
+            </div>
+            <div className="content-center">
+              <ul className="list-inside ml-5 mt-3 pt-8 ">
+                <li className="p-2  list-inside font-medium text-xl">
+                  <span className="font-extrabold	">1.</span> Responsive React
+                  Framework
                 </li>
-                <p className="p-4 text-base ">
-                  We incorporate the styling components from Material-UI and
-                  PrimeReact to enhance the aesthetics and functionality of our
-                  interface.
-                </p>
-              </div>
-              <div className="lg:bg-[#083344] bg-[#155e75] text-[#f8f5e6] p-8 rounded-2xl shadow-xl">
-                <li className="list-decimal list-inside font-bold text-xl">
-                  Optimized user experience for smooth navigation:
+                <li className="p-2  list-inside font-medium text-xl">
+                  <span className="font-extrabold	">2.</span> Streamlined styling
+                  with Tailwind CSS
                 </li>
-                <p className="p-4 text-base ">
-                  With a focus on user experience, we have optimized our
-                  frontend to minimize complexity and maximize efficiency.
-                </p>
-              </div>
-            </ul>
+                <li className="p-2  list-inside font-medium text-xl">
+                  <span className="font-extrabold	">3.</span> Enhanced aesthetics
+                  and functionality with Material-UI (MUI) and PrimeReact
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold	">4.</span> Interactive main
+                  page for easy photo uploads and report generation
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold	">5.</span> Optimized user
+                  experience for smooth navigation
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
