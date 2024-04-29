@@ -33,23 +33,22 @@ function AboutUs() {
           </button>
         </div>
       </div>
-
       <div id="page" className="grid grid-cols-6 gap-4">
         <div className="col-start-2 col-span-4 ...">
           <AboutPage />
         </div>
       </div>
       <AboutProjectDetails />
-      <div className="grid grid-cols-3 gap-4 bg-[#f0f9ff] mt-20 pt-16">
-        <div className="col-start-2  flex flex-col items-center">
-          <h2 className="text-5xl font-medium">Empower your curiosity.</h2>
+
+      <div className="grid grid-cols-4 gap-4 bg-[#f0f9ff] pt-16">
+        <div className="col-start-2 col-span-2  flex flex-col items-center">
+          <h2 className="text-5xl font-medium">Empower your curiosity!</h2>
           <h2 className="text-2xl pt-8">
-            Reach out to us for anything you want to learn!
+            Reach out to us for anything you want to learn.
           </h2>
           <ToContactPageButton />
         </div>
       </div>
-
       <div style={{ borderBottom: '8px solid #164e63' }}></div>
     </div>
   );

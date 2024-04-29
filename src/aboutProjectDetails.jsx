@@ -156,6 +156,16 @@ function aboutProjectDetails() {
               </ul>
             </div>
           </div>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1400/1*FcJQX2zzna7-rdEocH3jYw.png"
+            alt="Lots of solar panels in sunset"
+            className="mt-20 mb-20 "
+            style={{
+              maxWidth: '100%',
+              boxShadow: '4px 4px 10px 10px rgba(0, 0, 0, 0.1)',
+              mixBlendMode: 'darken',
+            }}
+          />
         </div>
       </div>
     </div>

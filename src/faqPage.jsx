@@ -17,18 +17,7 @@ function FaqPage() {
       question: "Why shouldn't we trust atoms?",
       answer: 'They make up everything',
     },
-    {
-      question: "Why shouldn't we trust atoms?",
-      answer: 'They make up everything',
-    },
-    {
-      question: "Why shouldn't we trust atoms?",
-      answer: 'They make up everything',
-    },
-    {
-      question: "Why shouldn't we trust atoms?",
-      answer: 'They make up everything',
-    },
+
     {
       question: 'What do you call someone with no body and no nose?',
       answer: 'Nobody knows.',

@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 function App() {
   return (
     <div>
-      <div style={{ paddingTop: '48px' }}>
+      <div>
         <Navbar />
       </div>
     </div>

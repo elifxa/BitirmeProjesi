@@ -1,16 +1,32 @@
 import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
 import 'primeicons/primeicons.css';
-
+import { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Menubar } from 'primereact/menubar';
-
 import Hero from './Hero';
 import Dropbox from './Dropbox';
 import SolarPanelinfo from './SolarPanelinfo';
 import AboutUs from './aboutUs';
 import ContactPage from './contactPage';
+
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const halfPageHeight = window.innerHeight / 3;
+      setIsScrolled(scrollPosition > halfPageHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const items = [
     {
       label: 'Home',
@@ -42,22 +58,20 @@ export default function Navbar() {
   return (
     <>
       <div
+        className={isScrolled ? 'navbar-scrolled' : ''}
         style={{
           position: 'fixed',
           width: '100%',
           zIndex: '1000',
           top: '0',
           left: '0',
-          backgroundColor: '#111 ',
         }}
       >
         <Menubar
           className="grid lg:justify-items-center"
           model={items}
           style={{
-            backgroundColor: '#111',
-            color: '#fff',
-            width: '100%',
+            backgroundColor: isScrolled ? '#111' : 'transparent',
           }}
         />
       </div>
@@ -68,6 +82,15 @@ export default function Navbar() {
         <Route path="/solar-panels" element={<SolarPanelinfo />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <style>
+        {`
+          .p-menuitem-text, .p-menuitem-icon {
+            color: #fff !important;
+            font-size: 18px;
+          }
+         
+        `}
+      </style>
     </>
   );
 }

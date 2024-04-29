@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function ToContactPageButton() {
   return (
-    <div className="m-12">
+    <div className="m-16 pb-8">
       <div className="card gap-3 py-2 px-4">
         <Link
           to="/contact"
