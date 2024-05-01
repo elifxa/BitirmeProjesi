@@ -38,7 +38,6 @@ function FaqPage() {
 
   return (
     <div className="faq-container">
-      <h1 className="mt-10 mb-8 text-center">Frequently Asked Questions</h1>
       {faqs.map((faq, index) => (
         <div
           key={index}
