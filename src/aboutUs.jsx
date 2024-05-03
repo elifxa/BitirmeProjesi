@@ -34,7 +34,7 @@ function AboutUs() {
         </div>
       </div>
       <div id="page" className="grid grid-cols-6 gap-4">
-        <div className="col-start-2 col-span-4 ...">
+        <div className="col-start-2 col-span-4">
           <AboutPage />
         </div>
       </div>

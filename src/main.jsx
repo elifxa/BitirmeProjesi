@@ -8,7 +8,7 @@ import { PrimeReactProvider } from 'primereact/api';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <PrimeReactProvider>
     <React.StrictMode>
-      <Router>
+      <Router scrollRestoration="auto">
         <App />
       </Router>
     </React.StrictMode>

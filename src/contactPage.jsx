@@ -10,14 +10,9 @@ function ContactPage() {
           alt="Contact"
           className="absolute inset-0 w-full h-full object-cover object-left-bottom brightness-[0.60] shadow-lg rounded-b-2xl"
         />
-        <div className="absolute mt-36 left-12 ml-8 p-20 text-[#fff] ">
+        <div className="absolute left-0 right-0 bottom-0 top-auto md:mt-20 md:left-12 md:ml-6 md:p-20 text-[#fff]">
           <div>
-            <h1
-              className="text-6xl font-medium"
-              style={{ fontFamily: 'Libre Baskerville, sans-serif' }}
-            >
-              Contact Us
-            </h1>
+            <h1 className="text-6xl font-medium">Contact Us</h1>
           </div>
         </div>
       </div>
@@ -102,7 +97,7 @@ function ContactPage() {
             <h3 className="text-lg pl-4 font-medium">Working Hours</h3>
             <div className="grid grid-rows-4 grid-flow-col gap-4">
               <p className="text-lg pl-14">
-                Mon to Fri:<span className="pr-10"></span> 8:00 am - 5:00 pm
+                Mon to Fri:<span className="pr-6"></span> 8:00 am - 5:00 pm
               </p>
               <p className="text-lg pl-14">
                 Sat:<span className="pr-24"></span> 8:00 am - 11:00 am
@@ -113,7 +108,7 @@ function ContactPage() {
 
         <div>
           <h2
-            className="text-5xl font-medium pl-6 pb-8 text-[#042f2e]"
+            className="text-6xl font-medium pl-6 pb-8 text-[#042f2e]"
             style={{ fontFamily: 'Kalam, sans-serif' }}
           >
             Leave a Reply

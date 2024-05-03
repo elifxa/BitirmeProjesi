@@ -12,8 +12,18 @@ export default function SolarPanelinfo() {
         />
 
         <div className="absolute bottom-2 left-8 p-8 text-[#fef3c7] ">
-          <h1 className="text-6xl">Solar Panels</h1>
-          <h2 className="text-3xl">Everything You Need to Know!</h2>
+          <h1
+            className="text-6xl"
+            style={{ fontFamily: 'Libre Baskerville, sans-serif' }}
+          >
+            Solar Panels
+          </h1>
+          <h2
+            className="text-3xl"
+            style={{ fontFamily: 'Libre Baskerville, sans-serif' }}
+          >
+            Everything You Need to Know!
+          </h2>
         </div>
       </div>
 

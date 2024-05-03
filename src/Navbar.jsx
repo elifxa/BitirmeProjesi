@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Menubar } from 'primereact/menubar';
-import Hero from './Hero';
-import Dropbox from './Dropbox';
-import SolarPanelinfo from './SolarPanelinfo';
+import HomePage from './HomePage';
+import UseProject from './useProject';
 import AboutUs from './aboutUs';
+import SolarPanelinfo from './SolarPanelinfo';
 import ContactPage from './contactPage';
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const halfPageHeight = window.innerHeight / 3;
+      const halfPageHeight = window.innerHeight / 8;
       setIsScrolled(scrollPosition > halfPageHeight);
     };
 
@@ -76,8 +76,8 @@ export default function Navbar() {
         />
       </div>
       <Routes>
-        <Route path="/" index element={<Hero />} />
-        <Route path="/use-project" element={<Dropbox />} />
+        <Route path="/" index element={<HomePage />} />
+        <Route path="/use-project" element={<UseProject />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/solar-panels" element={<SolarPanelinfo />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -86,7 +86,7 @@ export default function Navbar() {
         {`
           .p-menuitem-text, .p-menuitem-icon {
             color: #fff !important;
-            font-size: 18px;
+            font-size: 16px;
           }
          
         `}

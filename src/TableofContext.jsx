@@ -52,7 +52,7 @@ function TableOfContents() {
 
   return (
     <div
-      className="sticky top-20 ml-6 z-10 mt-4"
+      className="sticky top-20 ml-6 z-10 mt-4 pb-2"
       style={{ maxHeight: '100vh', overflowY: 'auto' }}
     >
       <h2 className="font-bold text-2xl">TABLE OF CONTENTS</h2>

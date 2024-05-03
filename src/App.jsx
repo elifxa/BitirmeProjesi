@@ -4,9 +4,7 @@ import Navbar from './Navbar';
 function App() {
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
+      <Navbar />
     </div>
   );
 }
