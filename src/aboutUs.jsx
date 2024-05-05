@@ -26,7 +26,7 @@ function AboutUs() {
           <h2 className="text-lg mt-8 pt-8">What is our mission and vision!</h2>
 
           <button
-            className="mt-2 px-6 py-2 border-4 border-[#fafafa] text-xl text-[#fafafa] rounded-md hover:bg-gray-400  hover:bg-opacity-50 transition duration-300 ease-in-out"
+            className="mt-2 px-6 py-2 border-4 border-[#fafafa] text-xl text-[#fafafa] rounded-full hover:bg-gray-400  hover:bg-opacity-50 transition duration-300 ease-in-out"
             onClick={scrollToPage}
           >
             Learn More!

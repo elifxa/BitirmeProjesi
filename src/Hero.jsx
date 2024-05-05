@@ -1,31 +1,32 @@
 import './Hero.css';
-
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Hero() {
   const textRef = useRef(null);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
 
   useEffect(() => {
-    const handleIntersect = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          textRef.current.classList.add('animate-bottom');
-        } else {
-          textRef.current.classList.remove('animate-bottom');
-        }
+    if (!animationTriggered) {
+      const handleIntersect = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            textRef.current.classList.add('animate-bottom');
+            setAnimationTriggered(true);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(handleIntersect, {
+        threshold: buildThresholdList(),
       });
-    };
 
-    const observer = new IntersectionObserver(handleIntersect, {
-      threshold: buildThresholdList(),
-    });
+      observer.observe(textRef.current);
 
-    observer.observe(textRef.current);
-
-    return () => {
-      observer.unobserve(textRef.current);
-    };
-  }, []);
+      return () => {
+        observer.unobserve(textRef.current);
+      };
+    }
+  }, [animationTriggered]);
 
   const buildThresholdList = () => {
     const thresholds = [];
@@ -37,7 +38,7 @@ function Hero() {
 
   return (
     <>
-      <div className="h-screen relative overflow-hidden bg-gradient-to-tl from-[#083344] via-gray-800 to-gray-950 flex justify-center items-center shadow-2xl rounded-b-2xl">
+      <div className="h-screen relative overflow-hidden flex justify-center items-center shadow-2xl ">
         <img
           src="https://images.unsplash.com/photo-1583345237708-add35a664d77?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Solar Panel"
