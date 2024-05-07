@@ -7,10 +7,10 @@ import { LineChart } from '@mui/x-charts/LineChart';
 export default function InfoPage() {
   return (
     <div>
-      <div>
-        <div id="section1">
+      <div id="section1">
+        <div>
           <div className="box">
-            <p className="pt-2 pb-6 text-lg">
+            <p className="pb-6 text-lg pt-8">
               <strong>Solar panels</strong> , also known as photovoltaic (PV)
               panels, are devices that convert sunlight into electricity. They
               are made up of multiple solar cells, which are typically made from
@@ -35,10 +35,14 @@ export default function InfoPage() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div id="section2">
-          <div className="box ">
-            <h2 className="text-4xl font-bold ">How Do Solar Panels Work?</h2>
+      <div id="section2">
+        <div>
+          <div className="box">
+            <h2 className="text-4xl font-bold pt-8">
+              How Do Solar Panels Work?
+            </h2>
             <p className="pt-6 text-lg">
               Solar panels work by harnessing the energy from sunlight and
               converting it into electricity through a process called the
@@ -74,10 +78,14 @@ export default function InfoPage() {
             </p>
           </div>
         </div>
+      </div>
 
-        <div id="section3">
+      <div id="section3">
+        <div>
           <div className="box">
-            <h2 className="text-4xl font-bold">Solar panel installation</h2>
+            <h2 className="text-4xl font-bold pt-8">
+              Solar panel installation
+            </h2>
             <p className="pt-6 text-lg">
               Most residential solar arrays are installed by a professional.
               Installing solar panels yourself is technically possible, but you
@@ -106,10 +114,12 @@ export default function InfoPage() {
             </p>
           </div>
         </div>
+      </div>
 
-        <div id="section4">
+      <div id="section4">
+        <div>
           <div className="box">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl font-bold pt-8">
               Care and lifespan of solar panels
             </h2>
             <p className="pt-6 text-lg">
@@ -132,10 +142,12 @@ export default function InfoPage() {
             </p>
           </div>
         </div>
+      </div>
 
-        <div id="section5">
+      <div id="section5">
+        <div>
           <div className="box">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl font-bold pt-8">
               Causes of Deterioration of Solar Panels
             </h2>
             <p className="pt-6 text-lg">
@@ -210,10 +222,14 @@ export default function InfoPage() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div id="section6">
+      <div id="section6">
+        <div>
           <div className="box">
-            <h2 className="text-4xl font-bold">Advantages of Solar Panels</h2>
+            <h2 className="text-4xl font-bold pt-8">
+              Advantages of Solar Panels
+            </h2>
             <p className="pt-6 text-lg">
               Solar panels offer numerous advantages, making them a popular
               choice for renewable energy generation. Here are some key
@@ -259,10 +275,14 @@ export default function InfoPage() {
             </p>
           </div>
         </div>
+      </div>
 
-        <div id="section7">
+      <div id="section7">
+        <div>
           <div className="box">
-            <h2 className="text-4xl font-bold ">Solar Panel Applications</h2>
+            <h2 className="text-4xl font-bold pt-8">
+              Solar Panel Applications
+            </h2>
             <p className="pt-6 text-lg">
               Solar panels have diverse applications across various sectors,
               harnessing sunlight to generate electricity and provide
@@ -316,10 +336,14 @@ export default function InfoPage() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div id="section8">
+      <div id="section8">
+        <div>
           <div className="box">
-            <h2 className="text-4xl font-bold">The Future of Solar Panels</h2>
+            <h2 className="text-4xl font-bold pt-8">
+              The Future of Solar Panels
+            </h2>
             <p className="pt-6 text-lg">
               The future of solar panels holds promise for further advancements
               in technology, efficiency, and integration, driving increased

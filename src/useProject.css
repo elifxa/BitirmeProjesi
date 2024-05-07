@@ -1,0 +1,11 @@
+.header {
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.header-span {
+  display: block;
+  color: #f1ebe5;
+  text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
+  letter-spacing: -4px;
+}

@@ -1,4 +1,5 @@
 import Hero from './Hero';
+import './HomePage.css';
 import HomePageCounter from './HomePageCounter';
 import HowItWorks from './HowItWorks';
 
@@ -73,25 +74,23 @@ function HomePage() {
       </div>
       {/*  */}
       <div>
-        <div className="grid justify-items-center text-center ">
-          <h2
-            className=" text-5xl font-semibold pt-10"
-            style={{ textShadow: '2px 3px 5px gray' }}
-          >
-            Our Solution
-          </h2>
-          <h2 className=" text-2xl font-semibold pt-4 p-8">
-            Hotspot Detection Technology
-          </h2>
-          <div className="grid lg:grid-cols-4 gap-4">
-            <div className="col-start-2 col-span-2 ">
-              <p>
-                To address these challenges, we have developed state-of-the-art
-                hotspot detection technology. Our system monitors the
-                performance of your solar panels, identifying any anomalies or
-                hotspots with pinpoint accuracy.
-              </p>
-            </div>
+        <div className="grid lg:grid-cols-4 gap-4 justify-items-center text-center ">
+          <div className="col-start-2 col-span-2 ">
+            <h2
+              className=" text-5xl font-semibold pt-10"
+              style={{ textShadow: '2px 3px 5px gray' }}
+            >
+              Our Solution
+            </h2>
+            <h2 className=" text-2xl font-semibold pt-4 p-8">
+              Hotspot Detection Technology
+            </h2>
+            <p>
+              To address these challenges, we have developed state-of-the-art
+              hotspot detection technology. Our system monitors the performance
+              of your solar panels, identifying any anomalies or hotspots with
+              pinpoint accuracy.
+            </p>
           </div>
         </div>
 
@@ -109,7 +108,7 @@ function HomePage() {
                   <path d="M32,104a8,8,0,0,1,8-8H56a8,8,0,0,1,0,16H40A8,8,0,0,1,32,104ZM71.43,58.75A8,8,0,0,0,82.75,47.43L71.43,36.12A8,8,0,0,0,60.12,47.43ZM128,40a8,8,0,0,0,8-8V16a8,8,0,0,0-16,0V32A8,8,0,0,0,128,40Zm50.91,21.09a8,8,0,0,0,5.66-2.34l11.31-11.32a8,8,0,0,0-11.31-11.31L173.25,47.43a8,8,0,0,0,5.66,13.66ZM192,104a8,8,0,0,0,8,8h16a8,8,0,0,0,0-16H200A8,8,0,0,0,192,104ZM88,112a8,8,0,0,0,8-8,32,32,0,0,1,64,0,8,8,0,0,0,16,0,48,48,0,0,0-96,0A8,8,0,0,0,88,112ZM238.91,220a8,8,0,0,1-6.91,4H24a8,8,0,0,1-7-11.94l40.69-72a8,8,0,0,1,7-4.06H191.3a8,8,0,0,1,7,4.06l40.69,72A8,8,0,0,1,238.91,220Zm-52.27-68H162.27l3.48,16h29.93Zm-37.26,16-3.48-16H110.1l-3.48,16Zm-46.24,16-5.21,24h60.14l-5.21-24ZM60.32,168H90.25l3.48-16H69.36ZM37.71,208H81.55l5.22-24H51.28Zm180.58,0-13.57-24H169.23l5.22,24Z"></path>
                 </svg>
                 <h3 className="text-xl font-semibold">
-                  Maximize Energy Output:
+                  Maximize Energy Output
                 </h3>
               </div>
               <p className="text-base text-center">
@@ -129,7 +128,7 @@ function HomePage() {
                 >
                   <path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"></path>
                 </svg>
-                <h3 className="text-xl font-semibold">Prevent Damage:</h3>
+                <h3 className="text-xl font-semibold">Prevent Damage</h3>
               </div>
 
               <p className="text-base text-center">
@@ -141,7 +140,7 @@ function HomePage() {
           </div>
           <div className="md:w-auto grid content-center ">
             <img
-              src="https://img.lovepik.com/bg/20240112/Background-of-three-stacked-solar-panels_2759037_wh860.jpg!/fw/860"
+              src="https://img.freepik.com/premium-photo/3d-render-solar-panel-white-background-clean-energy_1000714-156.jpg"
               alt="solar panel"
               style={{
                 mixBlendMode: 'darken',
@@ -151,7 +150,7 @@ function HomePage() {
           <div className="grid grid-rows-2 grid-flow-col gap-4">
             <div className="pb-4 p-14 ">
               <div className="flex justify-between items-center">
-                <h3 className="text-xl font-semibold">Safety:</h3>{' '}
+                <h3 className="text-xl font-semibold">Safety</h3>{' '}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
@@ -172,7 +171,7 @@ function HomePage() {
             <div className=" pt-4 p-14 ">
               <div className="flex justify-between items-center">
                 <h3 className="text-xl font-semibold">
-                  Optimize Maintenance Costs:
+                  Optimize Maintenance Costs
                 </h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

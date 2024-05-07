@@ -1,27 +1,25 @@
 import Dropbox from './Dropbox';
+import './useProject.css';
 
 export default function useProject() {
   return (
-    <div className="h-screen bg-gradient-to-bl from-gray-950 via-gray-700 to-gray-900  text-[#ddd]">
-      <div>
-        <div className="p-40 pb-16">
-          <h1
-            className="text-center text-7xl font-semibold"
-            style={{ textShadow: '2px 3px 5px black' }}
-          >
-            Get Started
-          </h1>
-          <h1
-            className="text-center text-7xl font-semibold"
-            style={{ textShadow: '2px 3px 5px black' }}
-          >
-            With!
-          </h1>
+    <div className="h-screen bg-[#e0d1b7]">
+      <div className="bg-[#e0d1b7]">
+        <div className="pt-32 pb-16  grid justify-center justify-items-center text-7xl">
+          <h3 className="header text-center">
+            <span className="header-span">Get</span>{' '}
+            <span className="header-span">Started</span>{' '}
+            <span className="header-span">With</span>
+          </h3>{' '}
+          <hr className="border-4 w-full border-[#f1ebe5] my-2 " />
         </div>
       </div>
-      <div className="grid md:grid-cols-6 gap-4 m-24">
-        <div className="md:col-start-2 col-span-4">Dropbox</div>
-        <div className="md:col-start-2 col-span-4">See Results</div>
+      <div className=" bg-[#e0d1b7]">
+        <div className="grid justify-center justify-items-center md:grid-cols-6 gap-4 ">
+          <div className="md:col-start-2 col-span-4">
+            <Dropbox />
+          </div>
+        </div>
       </div>
     </div>
   );

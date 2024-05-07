@@ -50,24 +50,20 @@ function aboutProjectDetails() {
             <div className="content-center">
               <ul className="list-inside ml-5 mt-3 pt-8">
                 <li className="p-2  list-inside font-medium text-xl">
-                  <span className="font-extrabold	">1.</span> Responsive React
-                  Framework
+                  <span className="font-extrabold	">1.</span> Leveraging the
+                  power of Python3 and PyTorch
                 </li>
                 <li className="p-2  list-inside font-medium text-xl">
-                  <span className="font-extrabold	">2.</span> Streamlined styling
-                  with Tailwind CSS
+                  <span className="font-extrabold	">2.</span> YOLOv8(You Only
+                  Look Once)
                 </li>
                 <li className="p-2  list-inside font-medium text-xl">
-                  <span className="font-extrabold	">3.</span> Enhanced aesthetics
-                  and functionality with Material-UI (MUI) and PrimeReact
+                  <span className="font-extrabold	">3.</span>Roboflow and Google
+                  Colab
                 </li>
                 <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold	">4.</span> Interactive main
-                  page for easy photo uploads and report generation
-                </li>
-                <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold	">5.</span> Optimized user
-                  experience for smooth navigation
+                  <span className="font-extrabold	">4.</span> Utilizing OpenCV
+                  (Open Source Computer Vision Library)
                 </li>
               </ul>
             </div>
@@ -77,8 +73,7 @@ function aboutProjectDetails() {
             <div className="lg:col-span-2 content-center">
               <ul className="list-inside ml-5 mt-3 pt-8">
                 <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold">1.</span> Responsive React
-                  Framework
+                  <span className="font-extrabold">1.</span> Python
                 </li>
                 <li className="p-2 list-inside font-medium text-xl">
                   <span className="font-extrabold">2.</span> Streamlined styling
@@ -148,10 +143,6 @@ function aboutProjectDetails() {
                 <li className="p-2 list-inside font-medium text-xl">
                   <span className="font-extrabold	">4.</span> Interactive main
                   page for easy photo uploads and report generation
-                </li>
-                <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold	">5.</span> Optimized user
-                  experience for smooth navigation
                 </li>
               </ul>
             </div>

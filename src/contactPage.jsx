@@ -74,9 +74,11 @@ function ContactPage() {
             <h3 className="text-lg pl-6 font-medium">Email</h3>
             <div className="grid grid-rows-4 grid-flow-col gap-4">
               <p className="text-lg pl-32">elif.akcay@std.antalya.edu.tr</p>
-              <p className="text-lg pl-32">elif.akcay@std.antalya.edu.tr</p>
-              <p className="text-lg pl-32">elif.akcay@std.antalya.edu.tr</p>
-              <p className="text-lg pl-32">elif.akcay@std.antalya.edu.tr</p>
+              <p className="text-lg pl-32">anil.albayrak@std.antalya.edu.tr</p>
+              <p className="text-lg pl-32">harun.sahinol@std.antalya.edu.tr</p>
+              <p className="text-lg pl-32">
+                senan.cobanoglu@std.antalya.edu.tr
+              </p>
             </div>
           </div>
           <hr className="border-1 border-gray-500 w-full my-2" />

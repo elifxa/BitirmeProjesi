@@ -10,29 +10,38 @@ function FaqPage() {
 
   const faqs = [
     {
-      question: "Why shouldn't we trust atoms?",
-      answer: 'They make up everything',
+      question: 'How does hotspot detection technology work?',
+      answer:
+        'This question seeks an overview of the underlying principles and techniques used to detect hotspots in solar panels. It could involve explanations of image processing algorithms, machine learning models, or thermal imaging technology.',
     },
     {
-      question: "Why shouldn't we trust atoms?",
-      answer: 'They make up everything',
+      question: 'How accurate is the hotspot detection system?',
+      answer:
+        'Stakeholders want assurance that the detection system can accurately identify hotspots with minimal false positives or false negatives. Accuracy metrics, validation procedures, and real-world performance data can help address this question.',
     },
 
     {
-      question: 'What do you call someone with no body and no nose?',
-      answer: 'Nobody knows.',
+      question:
+        'What is the impact of hotspots on solar panel performance and lifespan?',
+      answer:
+        'Explaining the consequences of hotspots on energy output, efficiency, and long-term durability helps stakeholders understand the importance of timely detection and mitigation efforts.',
     },
     {
-      question: "What's the object-oriented way to become wealthy?",
-      answer: 'Inheritance.',
+      question:
+        'Can hotspot detection be integrated into existing solar panel monitoring systems?',
+      answer:
+        'Compatibility with existing monitoring infrastructure is essential for seamless integration and scalability. Understanding integration options, data compatibility, and potential system enhancements can address stakeholders.',
     },
     {
-      question: 'How many tickles does it take to tickle an octopus?',
-      answer: 'Ten-tickles!',
+      question: 'How can hotspots be mitigated once detected?',
+      answer:
+        'Providing insights into mitigation strategies such as panel cleaning, maintenance procedures, electrical repairs, or module replacements helps stakeholders address identified hotspots effectively.',
     },
     {
-      question: 'What is: 1 + 1?',
-      answer: 'Depends on who you are asking.',
+      question:
+        'What are the long-term benefits of implementing hotspot detection technology?',
+      answer:
+        'Demonstrating the long-term benefits such as increased energy production, extended panel lifespan, reduced maintenance costs, and improved system reliability helps stakeholders understand the value proposition of the technology.',
     },
   ];
 
