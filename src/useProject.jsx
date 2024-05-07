@@ -9,7 +9,6 @@ export default function useProject() {
           <h3 className="header text-center">
             <span className="header-span">Get</span>{' '}
             <span className="header-span">Started</span>{' '}
-            <span className="header-span">With</span>
           </h3>{' '}
           <hr className="border-4 w-full border-[#f1ebe5] my-2 " />
         </div>

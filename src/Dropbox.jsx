@@ -56,25 +56,22 @@ export default function Dropbox() {
           maxFileSize={10000000}
           onUpload={onUpload}
         />{' '}
-        <h2 className="text-5xl pt-20">SEE RESULTS HERE</h2>
+        <h2 className="text-4xl pt-20">UPLOAD YOUR IMAGE AND</h2>
+        <h2 className="text-4xl ">SEE RESULTS HERE</h2>
         {uploading && ( // Display loading spinner if uploading is true
           <div className="text-center py-4">
             <i className="pi pi-spin pi-spinner text-5xl p-8"></i> Uploading and
             Processing...
           </div>
         )}
-        {!uploading &&
-          resultImage && ( // Display result if not uploading and resultImage is available
-            <div className="bg-[#e0d1b7]">
-              <div className="grid justify-items-center p-12">
-                <img
-                  src={`data:image/png;base64,${resultImage}`}
-                  alt="Result"
-                />
-                <p className="p-12">{report}</p>
-              </div>
+        {!uploading && resultImage && (
+          <div className="bg-[#e0d1b7]">
+            <div className="grid justify-items-center p-12">
+              <img src={`data:image/png;base64,${resultImage}`} alt="Result" />
+              <p className="p-12">{report}</p>
             </div>
-          )}
+          </div>
+        )}
       </div>
     </div>
   );
