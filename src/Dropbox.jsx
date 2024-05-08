@@ -1,14 +1,23 @@
 import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Toast } from 'primereact/toast';
 import { FileUpload } from 'primereact/fileupload';
+import { Button } from 'primereact/button';
 
 import './Dropbox.css';
 
 export default function Dropbox() {
   const toast = useRef(null);
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState(() => {
+    const storedResults = localStorage.getItem('dropbox_results');
+    return storedResults ? JSON.parse(storedResults) : [];
+  });
   const [uploading, setUploading] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('dropbox_results', JSON.stringify(results));
+  }, [results]);
+
   const onUpload = (event) => {
     const files = event.files;
 
@@ -46,6 +55,13 @@ export default function Dropbox() {
       });
   };
 
+  const deleteResult = (index) => {
+    const updatedResults = [...results];
+    updatedResults.splice(index, 1);
+    setResults(updatedResults);
+    localStorage.setItem('dropbox_results', JSON.stringify(updatedResults));
+  };
+
   return (
     <div>
       <div className="grid grid-cols-1 justify-items-center">
@@ -63,7 +79,7 @@ export default function Dropbox() {
         />
 
         {uploading && (
-          <div className="text-center py-4">
+          <div className="text-center">
             <i className="pi pi-spin pi-spinner text-5xl p-8"></i> Uploading and
             Processing...
           </div>
@@ -71,8 +87,20 @@ export default function Dropbox() {
         {!uploading && results.length > 0 && (
           <div className="grid grid-cols-3 gap-4">
             {results.map((result, index) => (
-              <div key={index} className="bg-[#e0d1b7]">
-                <div className="grid justify-items-center p-12">
+              <div key={index} className="bg-[#fffff3] relative">
+                <Button
+                  onClick={() => deleteResult(index)}
+                  icon="pi pi-times"
+                  className="p-button-rounded p-button-sm p-8"
+                  style={{
+                    position: 'absolute',
+                    top: '-5px',
+                    left: '-20px',
+                    color: 'red',
+                    fontSize: '30px',
+                  }}
+                />
+                <div className="grid justify-center p-12">
                   {result.image && (
                     <img
                       src={`data:image/png;base64,${result.image}`}

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 function Hero() {
   const textRef = useRef(null);
+  const homeRef = useRef(null);
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
   useEffect(() => {
@@ -37,6 +38,10 @@ function Hero() {
     return thresholds;
   };
 
+  const scrollToHomePage = () => {
+    homeRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="h-screen">
       <div className="relative h-full overflow-hidden flex justify-center items-center shadow-2xl ">
@@ -63,13 +68,18 @@ function Hero() {
               journey today! We are here to guide you every step of the way.
             </p>
           </div>
-          <button className="mt-16 px-20 py-4 rounded-full border-4 border-[#fafafa] text-xl text-[#fafafa] hover:bg-gray-400  hover:bg-opacity-50 transition duration-300 ease-in-out">
+          <button
+            className="mt-16 px-20 py-4 rounded-full border-4 border-[#fafafa] text-xl text-[#fafafa] hover:bg-gray-400  hover:bg-opacity-50 transition duration-300 ease-in-out"
+            onClick={scrollToHomePage}
+          >
             Read More!
           </button>
         </div>
       </div>
-      <div>
-        <HomePage />
+      <div ref={homeRef}>
+        <div className="pt-8">
+          <HomePage />
+        </div>
       </div>
     </div>
   );
