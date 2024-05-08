@@ -1,10 +1,9 @@
 import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
 import 'primeicons/primeicons.css';
 import { useState, useEffect } from 'react';
-// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Menubar } from 'primereact/menubar';
-import HomePage from './HomePage';
+import HomePage from './Hero';
 import UseProject from './useProject';
 import AboutUs from './aboutUs';
 import SolarPanelinfo from './SolarPanelinfo';
@@ -16,7 +15,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const halfPageHeight = window.innerHeight / 8;
+      const halfPageHeight = window.innerHeight / 10;
       setIsScrolled(scrollPosition > halfPageHeight);
     };
 
@@ -65,13 +64,15 @@ export default function Navbar() {
           zIndex: '1000',
           top: '0',
           left: '0',
+          backgroundColor: isScrolled ? '#333' : 'rgba(0, 0, 0, 0.2)',
+          transition: 'background-color 0.3s ease-in-out',
         }}
       >
         <Menubar
           className="grid lg:justify-items-center"
           model={items}
           style={{
-            backgroundColor: isScrolled ? '#111' : 'transparent',
+            backgroundColor: 'transparent',
           }}
         />
       </div>
@@ -87,8 +88,8 @@ export default function Navbar() {
           .p-menuitem-text, .p-menuitem-icon {
             color: #fff !important;
             font-size: 16px;
+            padding: 10px 2px 10px 2px ;
           }
-         
         `}
       </style>
     </>

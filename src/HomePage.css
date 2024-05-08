@@ -1,0 +1,20 @@
+.box {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0; /* Background color for the boxes */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.box-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.box-text {
+  position: absolute;
+
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Font weight */
+}

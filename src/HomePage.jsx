@@ -1,4 +1,3 @@
-import Hero from './Hero';
 import './HomePage.css';
 import HomePageCounter from './HomePageCounter';
 import HowItWorks from './HowItWorks';
@@ -6,8 +5,7 @@ import HowItWorks from './HowItWorks';
 function HomePage() {
   return (
     <div>
-      <Hero />
-      <div className="p-12 grid lg:grid-cols-3 gap-14 shadow-lg">
+      <div className="p-16 grid lg:grid-cols-3 gap-14 shadow-lg">
         <div className="text-[#020617] grid justify-items-center">
           <i className="fa fa-fire fa-3x"></i>
           <HomePageCounter target={1000} text={'+'} />
@@ -73,27 +71,31 @@ function HomePage() {
         </div>
       </div>
       {/*  */}
-      <div>
-        <div className="grid lg:grid-cols-4 gap-4 justify-items-center text-center ">
-          <div className="col-start-2 col-span-2 ">
-            <h2
-              className=" text-5xl font-semibold pt-10"
-              style={{ textShadow: '2px 3px 5px gray' }}
-            >
-              Our Solution
-            </h2>
-            <h2 className=" text-2xl font-semibold pt-4 p-8">
-              Hotspot Detection Technology
-            </h2>
-            <p>
-              To address these challenges, we have developed state-of-the-art
-              hotspot detection technology. Our system monitors the performance
-              of your solar panels, identifying any anomalies or hotspots with
-              pinpoint accuracy.
-            </p>
-          </div>
-        </div>
 
+      <div className="grid lg:grid-cols-4 gap-4 justify-items-center text-center ">
+        <div className="col-start-2 col-span-2 ">
+          <h2
+            className=" text-5xl font-semibold pt-10"
+            style={{ textShadow: '2px 3px 5px gray' }}
+          >
+            Our Solution
+          </h2>
+          <h2 className=" text-2xl font-semibold pt-4 p-8">
+            Hotspot Detection Technology
+          </h2>
+          <p>
+            To address these challenges, we have developed state-of-the-art
+            hotspot detection technology. Our system monitors the performance of
+            your solar panels, identifying any anomalies or hotspots with
+            pinpoint accuracy.
+          </p>
+        </div>
+      </div>
+
+      {/*  */}
+
+      <div className="grid lg:grid-cols-3 justify-items-center p-8">
+        {/* 
         <div className="grid lg:grid-cols-3 gap-2">
           <div className="grid grid-rows-2 grid-flow-col gap-4">
             <div className="pb-4 p-14">
@@ -138,15 +140,7 @@ function HomePage() {
               </p>
             </div>
           </div>
-          <div className="md:w-auto grid content-center ">
-            <img
-              src="https://img.freepik.com/premium-photo/3d-render-solar-panel-white-background-clean-energy_1000714-156.jpg"
-              alt="solar panel"
-              style={{
-                mixBlendMode: 'darken',
-              }}
-            />
-          </div>
+
           <div className="grid grid-rows-2 grid-flow-col gap-4">
             <div className="pb-4 p-14 ">
               <div className="flex justify-between items-center">
@@ -191,6 +185,23 @@ function HomePage() {
               </p>
             </div>
           </div>
+        </div> */}
+
+        <div className="box">
+          <img src="image1.jpg" alt="Image 1" className="box-image" />
+          <div className="box-text">Text 1</div>
+        </div>
+        <div className="box">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1682145585391-1d14209c4746?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Image 2"
+            className="box-image"
+          />
+          <div className="box-text">Text 2</div>
+        </div>
+        <div className="box">
+          <img src="image3.jpg" alt="Image 3" className="box-image" />
+          <div className="box-text">Text 3</div>
         </div>
       </div>
       {/*  */}

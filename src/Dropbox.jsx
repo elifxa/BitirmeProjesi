@@ -7,46 +7,50 @@ import './Dropbox.css';
 
 export default function Dropbox() {
   const toast = useRef(null);
-  const [resultImage, setResultImage] = useState(null);
-  const [report, setReport] = useState('');
-  const [uploading, setUploading] = useState(false); // State to track uploading status
-
+  const [results, setResults] = useState([]);
+  const [uploading, setUploading] = useState(false);
   const onUpload = (event) => {
-    const formData = new FormData();
-    formData.append('image', event.files[0]);
+    const files = event.files;
 
-    setUploading(true); // Set uploading state to true when upload begins
+    setUploading(true);
 
-    fetch('http://13.53.214.255/detect', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => response.json())
+    Promise.all(
+      files.map((file) => {
+        const formData = new FormData(); // Create a new FormData object for each file
+        formData.append('image', file);
+
+        return fetch('http://13.53.214.255/detect', {
+          method: 'POST',
+          body: formData,
+        }).then((response) => response.json());
+      })
+    )
       .then((data) => {
         console.log('Response from server:', data);
-        setResultImage(data.image);
-        setReport(data.report);
-        setUploading(false); // Set uploading state to false when result is received
+        setResults(data.flat()); // Flatten the array of arrays to a single array
+        setUploading(false);
         toast.current.show({
           severity: 'info',
           summary: 'Success',
-          detail: 'File Uploaded and Processed Successfully',
+          detail: 'Files Uploaded and Processed Successfully',
         });
       })
       .catch((error) => {
         console.error('Error:', error);
-        setUploading(false); // Set uploading state to false in case of error
+        setUploading(false);
         toast.current.show({
           severity: 'error',
           summary: 'Error',
-          detail: 'Failed to Upload File',
+          detail: 'Failed to Upload Files',
         });
       });
   };
 
   return (
     <div>
-      <div className="grid grid-cols-1 justify-items-center ">
+      <div className="grid grid-cols-1 justify-items-center">
+        <h2 className="text-4xl ">UPLOAD YOUR IMAGES AND</h2>
+        <h2 className="text-4xl pb-20">SEE RESULTS HERE</h2>
         <Toast ref={toast}></Toast>
         <FileUpload
           mode="basic"
@@ -54,22 +58,31 @@ export default function Dropbox() {
           url="http://13.53.214.255/detect"
           accept="image/*"
           maxFileSize={10000000}
+          multiple={true}
           onUpload={onUpload}
-        />{' '}
-        <h2 className="text-4xl pt-20">UPLOAD YOUR IMAGE AND</h2>
-        <h2 className="text-4xl ">SEE RESULTS HERE</h2>
-        {uploading && ( // Display loading spinner if uploading is true
+        />
+
+        {uploading && (
           <div className="text-center py-4">
             <i className="pi pi-spin pi-spinner text-5xl p-8"></i> Uploading and
             Processing...
           </div>
         )}
-        {!uploading && resultImage && (
-          <div className="bg-[#e0d1b7]">
-            <div className="grid justify-items-center p-12">
-              <img src={`data:image/png;base64,${resultImage}`} alt="Result" />
-              <p className="p-12">{report}</p>
-            </div>
+        {!uploading && results.length > 0 && (
+          <div className="grid grid-cols-3 gap-4">
+            {results.map((result, index) => (
+              <div key={index} className="bg-[#e0d1b7]">
+                <div className="grid justify-items-center p-12">
+                  {result.image && (
+                    <img
+                      src={`data:image/png;base64,${result.image}`}
+                      alt={`Result ${index}`}
+                    />
+                  )}
+                  <p className="p-12">{result.report}</p>
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>

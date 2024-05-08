@@ -1,3 +1,4 @@
+import HomePage from './HomePage';
 import './Hero.css';
 import { useEffect, useRef, useState } from 'react';
 
@@ -37,8 +38,8 @@ function Hero() {
   };
 
   return (
-    <>
-      <div className="h-screen relative overflow-hidden flex justify-center items-center shadow-2xl ">
+    <div className="h-screen">
+      <div className="relative h-full overflow-hidden flex justify-center items-center shadow-2xl ">
         <img
           src="https://images.unsplash.com/photo-1583345237708-add35a664d77?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Solar Panel"
@@ -47,7 +48,7 @@ function Hero() {
 
         <div
           ref={textRef}
-          className="absolute left-0 w-full text-white text-center p-10"
+          className="absolute left-0 w-full text-white text-center pt-24 pb-8"
           style={{ fontFamily: 'Libre Baskerville, sans-serif' }}
         >
           <h1 className="lg:text-6xl text-4xl font-medium mx-auto">
@@ -67,7 +68,10 @@ function Hero() {
           </button>
         </div>
       </div>
-    </>
+      <div>
+        <HomePage />
+      </div>
+    </div>
   );
 }
 
