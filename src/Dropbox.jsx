@@ -13,6 +13,7 @@ export default function Dropbox() {
     return storedResults ? JSON.parse(storedResults) : [];
   });
   const [uploading, setUploading] = useState(false);
+  const [resetKey, setResetKey] = useState(0); // Key to reset FileUpload component
 
   useEffect(() => {
     localStorage.setItem('dropbox_results', JSON.stringify(results));
@@ -43,6 +44,9 @@ export default function Dropbox() {
           summary: 'Success',
           detail: 'Files Uploaded and Processed Successfully',
         });
+
+        // Clear uploaded files by resetting FileUpload component
+        setResetKey((prevKey) => prevKey + 1);
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -65,18 +69,25 @@ export default function Dropbox() {
   return (
     <div>
       <div className="grid grid-cols-1 justify-items-center">
-        <h2 className="text-4xl ">UPLOAD YOUR IMAGES AND</h2>
-        <h2 className="text-4xl pb-20">SEE RESULTS HERE</h2>
+        <h2 className="text-4xl text-center pt-5">
+          Upload Your Solar Panel Thermal Images
+        </h2>
+        <h2 className="text-4xl text-center pb-10">SEE RESULTS</h2>
         <Toast ref={toast}></Toast>
-        <FileUpload
-          mode="basic"
-          name="demo[]"
-          url="http://13.53.214.255/detect"
-          accept="image/*"
-          maxFileSize={10000000}
-          multiple={true}
-          onUpload={onUpload}
-        />
+        <div>
+          <FileUpload
+            key={resetKey} // Reset FileUpload component when key changes
+            name="demo[]"
+            url="http://13.53.214.255/detect"
+            multiple
+            accept="image/*"
+            maxFileSize={10000000}
+            emptyTemplate={
+              <p className="m-0">Drag and drop files to here to upload.</p>
+            }
+            onUpload={onUpload}
+          />
+        </div>
 
         {uploading && (
           <div className="text-center">
@@ -85,7 +96,7 @@ export default function Dropbox() {
           </div>
         )}
         {!uploading && results.length > 0 && (
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid lg:grid-cols-3 gap-4">
             {results.map((result, index) => (
               <div key={index} className="bg-[#fffff3] relative">
                 <Button

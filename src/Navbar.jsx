@@ -66,6 +66,7 @@ export default function Navbar() {
           left: '0',
           backgroundColor: isScrolled ? '#333' : 'rgba(0, 0, 0, 0.2)',
           transition: 'background-color 0.3s ease-in-out',
+          padding: isScrolled ? '2px 0' : '10px 2px',
         }}
       >
         <Menubar
@@ -88,8 +89,8 @@ export default function Navbar() {
           .p-menuitem-text, .p-menuitem-icon {
             color: #fff !important;
             font-size: 16px;
-            padding: 10px 2px 10px 2px ;
           }
+         
         `}
       </style>
     </>
