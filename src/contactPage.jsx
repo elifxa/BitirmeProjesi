@@ -50,7 +50,7 @@ function ContactPage() {
               />
             </svg>
             <h3 className="text-lg pl-6 font-medium">Get in Touch</h3>
-            <p className="text-lg pl-20">+90 (544) 204 12 52</p>
+            <p className="text-lg pl-20">+90 (544) 204 12 53</p>
           </div>
           <hr className="border-1 border-gray-500 w-full my-2" />
           <div className="flex flex-row p-6">
