@@ -1,16 +1,13 @@
-/* Dropbox.css */
-
-/* Style the Choose button */
+/*Button*/
 .p-fileupload-choose {
   padding: 20px 60px; /* Adjust padding to increase button size */
-  background-color: #155e75; /* Change background color to blue (you can use any color you prefer) */
-  color: #fff; /* Change text color to white */
+  background-color: #155e75;
+  color: #fff;
   font-size: 24px;
-  border: none; /* Remove border */
-  border-radius: 10px; /* Apply border-radius for rounded corners */
+  border: none;
+  border-radius: 10px;
 }
 
-/* Hover effect for the Choose button */
 .p-fileupload-choose:hover {
-  background-color: #083344; /* Darker blue on hover */
+  background-color: #083344;
 }

@@ -1,4 +1,4 @@
-import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
+import { Image } from 'primereact/image';
 import { useRef, useState, useEffect } from 'react';
 import { Toast } from 'primereact/toast';
 import { FileUpload } from 'primereact/fileupload';
@@ -74,9 +74,9 @@ export default function Dropbox() {
         </h2>
         <h2 className="text-4xl text-center pb-10">SEE RESULTS</h2>
         <Toast ref={toast}></Toast>
-        <div>
+        <div className="dropbox-container">
           <FileUpload
-            key={resetKey} // Reset FileUpload component when key changes
+            key={resetKey}
             name="demo[]"
             url="http://13.53.214.255/detect"
             multiple
@@ -89,36 +89,32 @@ export default function Dropbox() {
           />
         </div>
 
-        {uploading && (
-          <div className="text-center">
-            <i className="pi pi-spin pi-spinner text-5xl p-8"></i> Uploading and
-            Processing...
-          </div>
-        )}
         {!uploading && results.length > 0 && (
-          <div className="grid lg:grid-cols-3 gap-4">
+          <div className="flex flex-wrap gap-4 mt-10">
             {results.map((result, index) => (
-              <div key={index} className="bg-[#fffff3] relative">
+              <div
+                key={index}
+                className="relative p-4 w-full lg:w-auto lg:flex"
+              >
                 <Button
                   onClick={() => deleteResult(index)}
                   icon="pi pi-times"
-                  className="p-button-rounded p-button-sm p-8"
-                  style={{
-                    position: 'absolute',
-                    top: '-5px',
-                    left: '-20px',
-                    color: 'red',
-                    fontSize: '30px',
-                  }}
+                  className="p-button-rounded p-button-lg p-1 absolute top-0 left-0 -m-2"
+                  style={{ color: 'red' }}
                 />
-                <div className="grid justify-center p-12">
-                  {result.image && (
-                    <img
-                      src={`data:image/png;base64,${result.image}`}
-                      alt={`Result ${index}`}
-                    />
-                  )}
-                  <p className="p-12">{result.report}</p>
+                <div className="relative w-full md:w-1/3 pr-4">
+                  <Image
+                    src={`data:image/png;base64,${result.image}`}
+                    alt={`Result ${index}`}
+                    className="w-full h-auto mb-4"
+                    preview
+                  />
+                </div>
+                <div className="w-full  grid grid-col justify-between relative">
+                  <div>
+                    <h3 className="text-xl font-bold">Result {index + 1}</h3>
+                    <p>{result.report}</p>
+                  </div>
                 </div>
               </div>
             ))}

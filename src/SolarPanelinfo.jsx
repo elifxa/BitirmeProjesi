@@ -11,7 +11,7 @@ export default function SolarPanelinfo() {
           className="absolute inset-0 w-full h-full object-cover brightness-[0.30] shadow-lg"
         />
 
-        <div className="absolute bottom-2 left-8 p-8 text-[#fef3c7] ">
+        <div className="absolute bottom-2 left-8 p-8 text-[#fafafa] ">
           <h1
             className="text-6xl"
             style={{ fontFamily: 'Libre Baskerville, sans-serif' }}

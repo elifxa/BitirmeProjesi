@@ -1,4 +1,3 @@
-import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
 import 'primeicons/primeicons.css';
 
 import './infoPage.css';

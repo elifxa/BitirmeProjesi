@@ -17,7 +17,7 @@ function aboutProjectDetails() {
           <h1
             className="md:text-4xl font-medium italic text-[#082f49]"
             style={{
-              backgroundColor: '#f8f5e6',
+              backgroundColor: '#FAFAFA',
               boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.5)',
               padding: '30px',
               borderRadius: '2px',

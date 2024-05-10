@@ -1,4 +1,5 @@
-import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
+import 'primereact/resources/themes/arya-blue/theme.css';
+
 import 'primeicons/primeicons.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -8,6 +9,8 @@ import UseProject from './useProject';
 import AboutUs from './aboutUs';
 import SolarPanelinfo from './SolarPanelinfo';
 import ContactPage from './contactPage';
+
+import logo from './assets/logo.png';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,6 +62,9 @@ export default function Navbar() {
       <div
         className={isScrolled ? 'navbar-scrolled' : ''}
         style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
           position: 'fixed',
           width: '100%',
           zIndex: '1000',
@@ -69,11 +75,49 @@ export default function Navbar() {
           padding: isScrolled ? '2px 0' : '10px 2px',
         }}
       >
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ height: '60px', marginLeft: '30px' }}
+          />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}
+          >
+            <h1
+              style={{ color: '#fde68a', marginLeft: '30px', fontSize: '12px' }}
+            >
+              SOLAR
+            </h1>
+            <h1
+              style={{
+                color: '#fde68a',
+                marginLeft: '10px',
+                fontSize: '12px',
+              }}
+            >
+              TECH.
+            </h1>
+          </div>
+        </div>
+
         <Menubar
           className="grid lg:justify-items-center"
           model={items}
           style={{
             backgroundColor: 'transparent',
+            flex: '1',
+            justifyContent: 'justify-start',
           }}
         />
       </div>
@@ -90,7 +134,6 @@ export default function Navbar() {
             color: #fff !important;
             font-size: 16px;
           }
-         
         `}
       </style>
     </>

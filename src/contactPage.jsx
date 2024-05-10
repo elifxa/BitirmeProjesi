@@ -4,11 +4,12 @@ import ContactEmail from './contactEmail';
 function ContactPage() {
   return (
     <div className="h-screen">
-      <div className="relative h-1/2 bg-gray-500 rounded-b-2xl">
+      <div className="relative h-1/2 rounded-b-2xl">
         <img
           src="https://www.tokiomarine.com/content/dam/tokiomarine/my/non-life/get-in-touch/Contact-Us-Header-Desktop.jpg"
           alt="Contact"
-          className="absolute inset-0 w-full h-full object-cover object-left-bottom brightness-[0.60] shadow-lg rounded-b-2xl"
+          className="absolute inset-0 w-full h-full object-fit brightness-[0.60] shadow-lg rounded-b-2xl"
+          style={{ minWidth: '100%' }}
         />
         <div className="absolute left-0 right-0 bottom-0 top-auto md:mt-20 md:left-12 md:ml-6 md:p-20 text-[#fff]">
           <div>
@@ -113,7 +114,7 @@ function ContactPage() {
             className="text-6xl font-medium pl-6 pb-8 text-[#042f2e]"
             style={{ fontFamily: 'Kalam, sans-serif' }}
           >
-            Leave a Reply
+            Leave a Note
           </h2>
           <ContactEmail />
         </div>

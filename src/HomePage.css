@@ -12,6 +12,7 @@
 
 .card:nth-child(2) {
   transform: translateY(-20px);
+  margin-top: 20px;
 }
 
 .card::before {

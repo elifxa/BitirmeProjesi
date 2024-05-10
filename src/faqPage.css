@@ -1,8 +1,12 @@
 .faq-container {
   max-width: 600px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
 }
 
+/* Adjusting FAQ items */
 .faq {
   background-color: transparent;
   border: 1px solid #9fa4a8;
@@ -12,6 +16,8 @@
   position: relative;
   overflow: hidden;
   transition: 0.3s ease;
+  width: 100%; /* Ensure FAQ items take full width */
+  max-width: 500px; /* Limit maximum width for better readability */
 }
 
 .faq.active {
