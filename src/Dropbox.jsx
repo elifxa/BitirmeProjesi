@@ -21,6 +21,7 @@ export default function Dropbox() {
 
   const onUpload = (event) => {
     const files = event.files;
+    console.log('Files to upload:', files);
 
     setUploading(true);
 
@@ -77,7 +78,7 @@ export default function Dropbox() {
         <div className="dropbox-container">
           <FileUpload
             key={resetKey}
-            name="demo[]"
+            name="image"
             url="http://13.53.214.255/detect"
             multiple
             accept="image/*"
