@@ -9,13 +9,62 @@ export default function ContactEmail() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
+
+  const handleValidation = () => {
+    const newErrors = {};
+    let isValid = true;
+
+    if (name.trim() === '') {
+      newErrors.name = 'Name is required';
+      isValid = false;
+    }
+
+    if (email.trim() === '') {
+      newErrors.email = 'Email is required';
+      isValid = false;
+    }
+
+    if (message.trim() === '') {
+      newErrors.message = 'Message is required';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleChange = (field, value) => {
+    if (errors[field]) {
+      setErrors({ ...errors, [field]: '' });
+    }
+
+    switch (field) {
+      case 'name':
+        setName(value);
+        break;
+      case 'email':
+        setEmail(value);
+        break;
+      case 'message':
+        setMessage(value);
+        break;
+      default:
+        break;
+    }
+  };
 
   const handleSubmit = () => {
+    if (!handleValidation()) {
+      return;
+    }
+
     const formData = {
       name: name,
       email: email,
       message: message,
     };
+
     fetch('http://13.53.214.255/send_email', {
       method: 'POST',
       body: JSON.stringify(formData),
@@ -57,7 +106,9 @@ export default function ContactEmail() {
           maxRows={4}
           fullWidth
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => handleChange('name', e.target.value)}
+          error={errors.name}
+          helperText={errors.name}
         />
         <h3 className="pb-2">E-mail</h3>
         <TextField
@@ -67,7 +118,9 @@ export default function ContactEmail() {
           multiline
           fullWidth
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => handleChange('email', e.target.value)}
+          error={errors.email}
+          helperText={errors.email}
         />
         <h3 className="pb-2">Message</h3>
         <TextField
@@ -77,7 +130,9 @@ export default function ContactEmail() {
           rows={4}
           fullWidth
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => handleChange('message', e.target.value)}
+          error={errors.message}
+          helperText={errors.message}
         />
         <Button variant="contained" onClick={handleSubmit}>
           Send

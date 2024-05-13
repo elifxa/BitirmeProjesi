@@ -70,10 +70,12 @@ export default function Dropbox() {
   return (
     <div>
       <div className="grid grid-cols-1 justify-items-center">
-        <h2 className="text-4xl text-center pt-5">
-          Upload Your Solar Panel Thermal Images
+        <h2
+          className="text-4xl text-center pb-10"
+          style={{ textShadow: '2px 3px 5px gray' }}
+        >
+          SEE RESULTS
         </h2>
-        <h2 className="text-4xl text-center pb-10">SEE RESULTS</h2>
         <Toast ref={toast}></Toast>
         <div className="dropbox-container">
           <FileUpload

@@ -27,6 +27,44 @@ export default function useProject() {
         </div>
       </div>
 
+      <div>
+        <div className="grid lg:grid-cols-2 justify-center p-10">
+          <h2 className="ml-10 text-5xl">How to Use?</h2>
+          <div></div>
+          <div className="p-10 m-10 bg-[#fffff3]  rounded-md shadow-lg step-card">
+            <h3 className="text-4xl pb-4">01</h3>
+            <p className="text-center">TAKE A THERMAL IMAGE OF YOUR PANEL.</p>
+          </div>
+
+          <div className="p-10 m-10 bg-[#fffff3]  rounded-md shadow-lg step-card">
+            <h3 className="text-4xl pb-4">02</h3>
+            <p className="text-center">
+              UPLOAD THIS IMAGE TO THE{' '}
+              <span style={{ fontWeight: 'bold', color: '#155e75' }}>
+                CHOOSE{' '}
+              </span>
+              BUTTON BELOW.
+            </p>
+          </div>
+
+          <div className="p-10 m-10 bg-[#fffff3]  rounded-md shadow-lg step-card">
+            <h3 className="text-4xl pb-4">03</h3>
+            <p className="text-center">
+              MAKE SURE YOU UPLOAD THE CORRECT IMAGE(S) BEFORE CLICKING THE
+              UPLOAD BUTTON.
+            </p>
+          </div>
+
+          <div className="p-10 m-10 bg-[#fffff3] rounded-md shadow-lg step-card">
+            <h3 className="text-4xl pb-4">04</h3>
+            <p className="text-center">
+              AND YOU WILL SEE THE RESULTING IMAGE AND COORDINATES OF THE
+              DEFECTIVE AREA IN A SECOND!
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className=" ">
         <div className="grid justify-center justify-items-center md:grid-cols-6 gap-4 ">
           <div className="md:col-start-2 col-span-4">

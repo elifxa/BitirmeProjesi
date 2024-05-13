@@ -9,3 +9,8 @@
   text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
   letter-spacing: -4px;
 }
+
+/* steps */
+.step-card {
+  border-top: 4px solid #164e63;
+}

@@ -1,4 +1,8 @@
 /*Button*/
+.p-fileupload {
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4);
+}
+
 .p-fileupload-choose {
   padding: 20px 60px; /* Adjust padding to increase button size */
   background-color: #155e75;
