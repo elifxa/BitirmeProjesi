@@ -66,7 +66,6 @@ export default function Dropbox() {
     setResults(updatedResults);
     localStorage.setItem('dropbox_results', JSON.stringify(updatedResults));
   };
-
   const downloadPDF = (index) => {
     const doc = new jsPDF();
 
@@ -98,7 +97,22 @@ export default function Dropbox() {
       const pageWidth = doc.internal.pageSize.getWidth();
       doc.text(pageWidth - textWidth - 10, 15, dateTimeString);
 
-      doc.save(`result_${index}_${Date.now()}.pdf`);
+      // Attempt automatic download
+      const blob = doc.output('blob');
+      if (window.navigator.msSaveOrOpenBlob) {
+        // For IE
+        window.navigator.msSaveOrOpenBlob(
+          blob,
+          `result_${index}_${Date.now()}.pdf`
+        );
+      } else {
+        // For other browsers
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `result_${index}_${Date.now()}.pdf`;
+        link.click();
+        URL.revokeObjectURL(link.href); // Clean up
+      }
     };
   };
 

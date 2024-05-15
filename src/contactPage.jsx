@@ -2,7 +2,7 @@ function ContactPage() {
   return (
     <div>
       <div>
-        <div className="flex flex-row p-6">
+        <div className="flex flex-row">
           <div className="w-6 h-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -17,14 +17,14 @@ function ContactPage() {
           <div className="w-full sm:w-auto sm:pl-6">
             <div className="flex flex-col">
               <h3 className="text-lg font-medium pb-2">Address</h3>
-              <p className="text-lg pl-0 sm:pl-2">
+              <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl pl-0 sm:pl-2">
                 Çıplaklı, Akdeniz Blv. No:290/A, 07190 Döşemealtı/Antalya
               </p>
             </div>
           </div>
         </div>
         <hr className="border-1 border-gray-500 w-full my-2" />
-        <div className="flex flex-row p-6">
+        <div className="flex flex-row">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -39,11 +39,13 @@ function ContactPage() {
           </svg>
           <div className="w-full sm:w-auto sm:pl-6">
             <h3 className="text-lg font-medium pb-2">Get in Touch</h3>
-            <p className="text-lg pl-0 sm:pl-2">+90 (544) 204 12 53</p>
+            <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl pl-0 sm:pl-2">
+              +90 (544) 204 12 53
+            </p>
           </div>
         </div>
         <hr className="border-1 border-gray-500 w-full my-2" />
-        <div className="flex flex-row p-6">
+        <div className="flex flex-row">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -64,7 +66,7 @@ function ContactPage() {
           <div className="w-full sm:w-auto sm:pl-6">
             <h3 className="text-lg font-medium pb-4">Email</h3>
             <div className="grid grid-rows-4 grid-flow-col gap-4 sm:grid-flow-row">
-              <p className="text-lg pl-0 sm:pl-2">
+              <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl pl-0 sm:pl-2">
                 elif.akcay@std.antalya.edu.tr
               </p>
               <p className="text-lg pl-0 sm:pl-2">
@@ -80,7 +82,7 @@ function ContactPage() {
           </div>
         </div>
         <hr className="border-1 border-gray-500 w-full my-2" />
-        <div className="flex flex-row p-6">
+        <div className="flex flex-row">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -97,10 +99,10 @@ function ContactPage() {
           <div className="w-full sm:w-auto sm:pl-6">
             <h3 className="text-lg font-mediu pb-4">Working Hours</h3>
             <div className="grid grid-rows-4 grid-flow-col gap-4 sm:grid-flow-row">
-              <p className="text-lg pl-0 sm:pl-2">
+              <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl pl-0 sm:pl-2">
                 Mon to Fri:<span className="pr-6"></span> 8:00 am - 5:00 pm
               </p>
-              <p className="text-lg pl-0 sm:pl-2">
+              <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl pl-0 sm:pl-2">
                 Sat:<span className="pr-24"></span> 8:00 am - 11:00 am
               </p>
             </div>

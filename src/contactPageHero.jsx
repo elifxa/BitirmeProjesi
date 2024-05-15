@@ -18,7 +18,7 @@ function ContactPageHero() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 p-4">
+      <div className="grid lg:grid-cols-2 lg:p-8 p-4">
         <div>
           <ContactPage />
         </div>
