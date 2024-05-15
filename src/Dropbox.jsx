@@ -30,7 +30,7 @@ export default function Dropbox() {
         const formData = new FormData(); // Create a new FormData object for each file
         formData.append('image', file);
 
-        return fetch('http://13.53.214.255/detect', {
+        return fetch('https://www.beha-tech.com/detect', {
           method: 'POST',
           body: formData,
         }).then((response) => response.json());
@@ -119,7 +119,7 @@ export default function Dropbox() {
           <FileUpload
             key={resetKey}
             name="image"
-            url="http://13.53.214.255/detect"
+            url="https://www.beha-tech.com/detect"
             multiple
             accept="image/*"
             maxFileSize={10000000}
