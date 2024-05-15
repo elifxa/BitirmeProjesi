@@ -23,6 +23,9 @@ export default function ContactEmail() {
     if (email.trim() === '') {
       newErrors.email = 'Email is required';
       isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = 'Email is invalid';
+      isValid = false;
     }
 
     if (message.trim() === '') {
@@ -65,7 +68,7 @@ export default function ContactEmail() {
       message: message,
     };
 
-    fetch('http://13.53.214.255/send_email', {
+    fetch('https://www.beha-tech.com/send_email', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {

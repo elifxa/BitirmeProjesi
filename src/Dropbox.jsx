@@ -66,43 +66,40 @@ export default function Dropbox() {
     setResults(updatedResults);
     localStorage.setItem('dropbox_results', JSON.stringify(updatedResults));
   };
-  const downloadPDF = () => {
+
+  const downloadPDF = (index) => {
     const doc = new jsPDF();
 
-    results.forEach((result, index) => {
-      const img = document.createElement('img');
-      img.src = `data:image/png;base64,${result.image}`;
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        ctx.drawImage(img, 0, 0);
+    const result = results[index];
+    const img = document.createElement('img');
+    img.src = `data:image/png;base64,${result.image}`;
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
 
-        const imgData = canvas.toDataURL('image/png');
-        doc.addImage(imgData, 'PNG', 10, index * 120 + 20, 90, 90);
-        doc.text(10, index * 120 + 120, result.report);
+      const imgData = canvas.toDataURL('image/png');
+      doc.addImage(imgData, 'PNG', 10, 20, 90, 90);
+      doc.text(10, 120, result.report);
 
-        if (index === results.length - 1) {
-          // Add date and time to the top right of the last page
-          const now = new Date();
-          const dateString = `${now.getFullYear()}-${
-            now.getMonth() + 1
-          }-${now.getDate()}`;
-          const timeString = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-          const dateTimeString = `${dateString} ${timeString}`;
-          const { lineHeight } = doc.getFont().metadata;
-          const textWidth =
-            (doc.getStringUnitWidth(dateTimeString) *
-              doc.internal.getFontSize()) /
-            doc.internal.scaleFactor;
-          const pageWidth = doc.internal.pageSize.getWidth();
-          doc.text(pageWidth - textWidth - 10, 15, dateTimeString);
+      // Add date and time to the top right of the page
+      const now = new Date();
+      const dateString = `${now.getFullYear()}-${
+        now.getMonth() + 1
+      }-${now.getDate()}`;
+      const timeString = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+      const dateTimeString = `${dateString} ${timeString}`;
+      const { lineHeight } = doc.getFont().metadata;
+      const textWidth =
+        (doc.getStringUnitWidth(dateTimeString) * doc.internal.getFontSize()) /
+        doc.internal.scaleFactor;
+      const pageWidth = doc.internal.pageSize.getWidth();
+      doc.text(pageWidth - textWidth - 10, 15, dateTimeString);
 
-          doc.save(`results_${Date.now()}.pdf`);
-        }
-      };
-    });
+      doc.save(`result_${index}_${Date.now()}.pdf`);
+    };
   };
 
   return (
@@ -151,19 +148,23 @@ export default function Dropbox() {
                     style={{ width: '100%', maxHeight: '300px' }}
                   />
                 </div>
-                <div className="w-full  grid grid-col justify-between relative">
-                  <div>
+                <div>
+                  <div className="w-full grid grid-col justify-between relative">
                     <h3 className="text-xl font-bold">Result {index + 1}</h3>
                     <p style={{ fontSize: '16px', whiteSpace: 'pre-wrap' }}>
                       {result.report}
                     </p>{' '}
                   </div>
                   <Button
-                    onClick={() => downloadPDF(result)}
+                    onClick={() => downloadPDF(index)}
+                    label="Download PDF"
                     icon="pi pi-download"
-                    className="p-button-rounded p-button-lg p-1 absolute bottom-0 right-0 -m-4"
+                    className="p-button-lg"
                     style={{
                       color: 'green',
+                      border: '1px solid green',
+                      padding: '0.5rem',
+                      marginTop: '1rem',
                     }}
                   />
                 </div>
