@@ -70,7 +70,7 @@ function Hero() {
             </p>
           </div>
           <button
-            className="mt-16 px-20 py-4 rounded-full border-4 border-[#fafafa] text-xl text-[#fafafa] hover:bg-gray-400  hover:bg-opacity-50 transition duration-300 ease-in-out"
+            className="mt-16 px-20 py-4 rounded-full border-4 border-[#333] hover:border-[#fafafa] text-xl bg-[#fafafa] text-[#333] hover:text-[#fafafa] hover:bg-gray-400  hover:bg-opacity-50 transition duration-300 ease-in-out"
             onClick={navigateToUseProject}
           >
             START USING!

@@ -1,5 +1,4 @@
 import 'primereact/resources/themes/arya-blue/theme.css';
-
 import 'primeicons/primeicons.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -78,32 +77,26 @@ export default function Navbar() {
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
+            marginLeft: '10px', // Ensure the logo stays on the left
           }}
         >
-          <img
-            src={logo}
-            alt="Logo"
-            style={{ height: '60px', marginLeft: '30px' }}
-          />
+          <img src={logo} alt="Logo" style={{ height: '60px' }} />
           <div
             style={{
               display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
+              flexDirection: 'column', // Stack the text vertically
+              alignItems: 'center', // Center the text horizontally
             }}
           >
-            <h1
-              style={{ color: '#fde68a', marginLeft: '30px', fontSize: '12px' }}
-            >
+            <h1 style={{ color: '#f1c40f', fontSize: '14px', margin: '0' }}>
               SOLAR
             </h1>
             <h1
               style={{
-                color: '#fde68a',
-                marginLeft: '10px',
-                fontSize: '12px',
+                color: '#f1c40f',
+                fontSize: '14px',
+                margin: '0',
               }}
             >
               TECH.
@@ -117,7 +110,7 @@ export default function Navbar() {
           style={{
             backgroundColor: 'transparent',
             flex: '1',
-            justifyContent: 'justify-start',
+            justifyContent: 'flex-end', // Align menu items to the right
           }}
         />
       </div>
