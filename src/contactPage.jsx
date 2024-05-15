@@ -69,13 +69,13 @@ function ContactPage() {
               <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl pl-0 sm:pl-2">
                 elif.akcay@std.antalya.edu.tr
               </p>
-              <p className="text-lg pl-0 sm:pl-2">
+              <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl  pl-0 sm:pl-2">
                 anil.albayrak@std.antalya.edu.tr
               </p>
-              <p className="text-lg pl-0 sm:pl-2">
+              <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl  pl-0 sm:pl-2">
                 harun.sahinol@std.antalya.edu.tr
               </p>
-              <p className="text-lg pl-0 sm:pl-2">
+              <p className="sm:text-sm md:text-lg lg:text-xl xl:text-2xl  pl-0 sm:pl-2">
                 senan.cobanoglu@std.antalya.edu.tr
               </p>
             </div>

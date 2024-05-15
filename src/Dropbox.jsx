@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import { Toast } from 'primereact/toast';
 import { FileUpload } from 'primereact/fileupload';
 import { Button } from 'primereact/button';
+import { ProgressSpinner } from 'primereact/progressspinner';
 import jsPDF from 'jspdf';
 
 import './Dropbox.css';
@@ -66,6 +67,7 @@ export default function Dropbox() {
     setResults(updatedResults);
     localStorage.setItem('dropbox_results', JSON.stringify(updatedResults));
   };
+
   const downloadPDF = (index) => {
     const doc = new jsPDF();
 
@@ -97,22 +99,15 @@ export default function Dropbox() {
       const pageWidth = doc.internal.pageSize.getWidth();
       doc.text(pageWidth - textWidth - 10, 15, dateTimeString);
 
-      // Attempt automatic download
-      const blob = doc.output('blob');
-      if (window.navigator.msSaveOrOpenBlob) {
-        // For IE
-        window.navigator.msSaveOrOpenBlob(
-          blob,
-          `result_${index}_${Date.now()}.pdf`
-        );
-      } else {
-        // For other browsers
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = `result_${index}_${Date.now()}.pdf`;
-        link.click();
-        URL.revokeObjectURL(link.href); // Clean up
-      }
+      // Trigger download
+      const pdfBlob = doc.output('blob');
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(pdfBlob);
+      link.download = `result_${index}_${Date.now()}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(link.href); // Clean up
     };
   };
 
@@ -140,7 +135,11 @@ export default function Dropbox() {
             onUpload={onUpload}
           />
         </div>
-
+        {uploading && (
+          <div className="spinner-overlay">
+            <ProgressSpinner />
+          </div>
+        )}
         {!uploading && results.length > 0 && (
           <div className="flex flex-wrap gap-4 mt-10">
             {results.map((result, index) => (

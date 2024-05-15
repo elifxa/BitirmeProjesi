@@ -28,7 +28,7 @@ export default function useProject() {
       </div>
 
       <div>
-        <div className="grid lg:grid-cols-4 justify-center p-10">
+        <div className="grid lg:grid-cols-4 justify-center pt-10">
           <h2 className="ml-10 text-5xl lg:col-span-2">How to Use?</h2>
           <div></div> <div></div>
           <div className="p-10 m-10 bg-[#fffff3]  rounded-md shadow-lg step-card">
