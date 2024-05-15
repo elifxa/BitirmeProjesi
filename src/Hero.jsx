@@ -1,11 +1,12 @@
 import HomePage from './HomePage';
 import './Hero.css';
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Hero() {
   const textRef = useRef(null);
-  const homeRef = useRef(null);
   const [animationTriggered, setAnimationTriggered] = useState(false);
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     if (!animationTriggered) {
@@ -38,8 +39,8 @@ function Hero() {
     return thresholds;
   };
 
-  const scrollToHomePage = () => {
-    homeRef.current.scrollIntoView({ behavior: 'smooth' });
+  const navigateToUseProject = () => {
+    navigate('/use-project'); // Navigate to the specified path
   };
 
   return (
@@ -70,13 +71,13 @@ function Hero() {
           </div>
           <button
             className="mt-16 px-20 py-4 rounded-full border-4 border-[#fafafa] text-xl text-[#fafafa] hover:bg-gray-400  hover:bg-opacity-50 transition duration-300 ease-in-out"
-            onClick={scrollToHomePage}
+            onClick={navigateToUseProject}
           >
-            Read More!
+            START USING!
           </button>
         </div>
       </div>
-      <div ref={homeRef}>
+      <div>
         <div className="pt-8">
           <HomePage />
         </div>

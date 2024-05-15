@@ -8,7 +8,7 @@ import HomePage from './Hero';
 import UseProject from './useProject';
 import AboutUs from './aboutUs';
 import SolarPanelinfo from './SolarPanelinfo';
-import ContactPage from './contactPage';
+import ContactPageHero from './contactPageHero';
 
 import logo from './assets/logo.png';
 
@@ -126,7 +126,7 @@ export default function Navbar() {
         <Route path="/use-project" element={<UseProject />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/solar-panels" element={<SolarPanelinfo />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contact" element={<ContactPageHero />} />
       </Routes>
       <style>
         {`

@@ -134,7 +134,11 @@ export default function ContactEmail() {
           error={errors.message}
           helperText={errors.message}
         />
-        <Button variant="contained" onClick={handleSubmit}>
+        <Button
+          variant="contained"
+          onClick={handleSubmit}
+          sx={{ mt: 2, p: '12px 24px', fontSize: '1rem' }}
+        >
           Send
         </Button>
         <ToastContainer />

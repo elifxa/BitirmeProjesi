@@ -71,31 +71,26 @@ function aboutProjectDetails() {
           {/*  */}
           <div className="grid lg:grid-cols-4 gap-8 mt-6 pt-6">
             <div className="lg:col-span-2 content-center">
+              <p className="step-number">02</p>
+              <h2 className="heading">Backend</h2>
               <ul className="list-inside ml-5 mt-3 pt-8">
                 <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold">1.</span> Python
+                  <span className="font-extrabold">1.</span> Python3
                 </li>
                 <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold">2.</span> Streamlined styling
-                  with Tailwind CSS
+                  <span className="font-extrabold">2.</span> Docker
+                  (Streamlining Deployment Processes)
                 </li>
                 <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold">3.</span> Enhanced aesthetics
-                  and functionality with Material-UI(MUI) and PrimeReact
+                  <span className="font-extrabold">3.</span> Postman(Enhancing
+                  API Development )
                 </li>
                 <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold">4.</span> Interactive main
-                  page for easy photo uploads and report generation
-                </li>
-                <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold">5.</span> Optimized user
-                  experience for smooth navigation
+                  <span className="font-extrabold">4.</span> FastAPI Framework
                 </li>
               </ul>
             </div>
-            <div className="lg:col-start-3 lg:col-span-2 ">
-              <p className="step-number">02</p>
-              <h2 className="heading">Backend</h2>
+            <div className="lg:col-start-3 lg:col-span-2  content-end ">
               <div className="shadow-lg rounded-2xl p-8 bg-[#083344] text-white">
                 <p className="text-lg">
                   Behind the scenes, with powerful servers and efficient data

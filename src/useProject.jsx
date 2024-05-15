@@ -28,14 +28,13 @@ export default function useProject() {
       </div>
 
       <div>
-        <div className="grid lg:grid-cols-2 justify-center p-10">
-          <h2 className="ml-10 text-5xl">How to Use?</h2>
-          <div></div>
+        <div className="grid lg:grid-cols-4 justify-center p-10">
+          <h2 className="ml-10 text-5xl lg:col-span-2">How to Use?</h2>
+          <div></div> <div></div>
           <div className="p-10 m-10 bg-[#fffff3]  rounded-md shadow-lg step-card">
             <h3 className="text-4xl pb-4">01</h3>
             <p className="text-center">TAKE A THERMAL IMAGE OF YOUR PANEL.</p>
           </div>
-
           <div className="p-10 m-10 bg-[#fffff3]  rounded-md shadow-lg step-card">
             <h3 className="text-4xl pb-4">02</h3>
             <p className="text-center">
@@ -46,7 +45,6 @@ export default function useProject() {
               BUTTON BELOW.
             </p>
           </div>
-
           <div className="p-10 m-10 bg-[#fffff3]  rounded-md shadow-lg step-card">
             <h3 className="text-4xl pb-4">03</h3>
             <p className="text-center">
@@ -54,7 +52,6 @@ export default function useProject() {
               UPLOAD BUTTON.
             </p>
           </div>
-
           <div className="p-10 m-10 bg-[#fffff3] rounded-md shadow-lg step-card">
             <h3 className="text-4xl pb-4">04</h3>
             <p className="text-center">

@@ -382,7 +382,6 @@ export default function InfoPage() {
                 src="https://greenhomesystems.com/wp-content/uploads/2023/09/blog-cover-photo-98.jpg"
                 alt="solar panel 2"
                 className="image-wrapper"
-                style={{ maxWidth: '60%' }}
               />
             </div>
           </div>

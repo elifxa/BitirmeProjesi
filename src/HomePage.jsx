@@ -93,7 +93,7 @@ function HomePage() {
         </div>
         {/*  */}
 
-        <div className="grid lg:grid-cols-3 justify-items-center p-16 m-6">
+        <div className="grid lg:grid-cols-3 justify-items-center p-10 ">
           <div className="card bg-[#fffff3]">
             <div className="p-4 flex justify-center items-center">
               <svg
@@ -106,10 +106,10 @@ function HomePage() {
                 <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,200H40V72H216V200Zm-56-64a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V144H104a8,8,0,0,1,0-16h16V112a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,136Z"></path>
               </svg>
             </div>
-            <h3 className="p-2 flex justify-center items-center text-xl font-semibold">
+            <h3 className="p-2 flex justify-center items-center lg:text-xl font-semibold">
               Safety
             </h3>
-            <p className="text-base text-center">
+            <p className="lg:text-base text-center">
               Overheating in solar panels poses a fire risk. Detecting and
               mitigating hotspots not only preserves the integrity of your solar
               panels but also enhances safety for your property and surrounding
@@ -129,10 +129,10 @@ function HomePage() {
                 <path d="M32,104a8,8,0,0,1,8-8H56a8,8,0,0,1,0,16H40A8,8,0,0,1,32,104ZM71.43,58.75A8,8,0,0,0,82.75,47.43L71.43,36.12A8,8,0,0,0,60.12,47.43ZM128,40a8,8,0,0,0,8-8V16a8,8,0,0,0-16,0V32A8,8,0,0,0,128,40Zm50.91,21.09a8,8,0,0,0,5.66-2.34l11.31-11.32a8,8,0,0,0-11.31-11.31L173.25,47.43a8,8,0,0,0,5.66,13.66ZM192,104a8,8,0,0,0,8,8h16a8,8,0,0,0,0-16H200A8,8,0,0,0,192,104ZM88,112a8,8,0,0,0,8-8,32,32,0,0,1,64,0,8,8,0,0,0,16,0,48,48,0,0,0-96,0A8,8,0,0,0,88,112ZM238.91,220a8,8,0,0,1-6.91,4H24a8,8,0,0,1-7-11.94l40.69-72a8,8,0,0,1,7-4.06H191.3a8,8,0,0,1,7,4.06l40.69,72A8,8,0,0,1,238.91,220Zm-52.27-68H162.27l3.48,16h29.93Zm-37.26,16-3.48-16H110.1l-3.48,16Zm-46.24,16-5.21,24h60.14l-5.21-24ZM60.32,168H90.25l3.48-16H69.36ZM37.71,208H81.55l5.22-24H51.28Zm180.58,0-13.57-24H169.23l5.22,24Z"></path>
               </svg>
             </div>
-            <h3 className="p-2 flex justify-center items-center text-xl font-semibold">
+            <h3 className="p-2 flex justify-center items-center lg:text-xl font-semibold">
               Maximize Energy Output
             </h3>
-            <p className="text-base text-center">
+            <p className="lg:text-base text-center">
               By detecting and resolving hotspots promptly, we ensure that your
               solar panels operate at peak efficiency, maximizing energy
               production and your return on investment.
@@ -151,10 +151,10 @@ function HomePage() {
                 <path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"></path>
               </svg>
             </div>
-            <h3 className="p-2 flex justify-center items-center text-xl font-semibold">
+            <h3 className="p-2 flex justify-center items-center lg:text-xl font-semibold">
               Prevent Damage
             </h3>
-            <p className="text-base text-center">
+            <p className="lg:text-base text-center">
               Hotspots can cause irreparable damage to solar panels if left
               unchecked. Our proactive approach helps prevent long-term damage,
               extending the lifespan of your solar panel system.
