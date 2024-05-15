@@ -2,7 +2,7 @@ function ContactPage() {
   return (
     <div>
       <div>
-        <div className="flex flex-row">
+        <div className="flex flex-row pb-6">
           <div className="w-6 h-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ function ContactPage() {
           </div>
         </div>
         <hr className="border-1 border-gray-500 w-full my-2" />
-        <div className="flex flex-row">
+        <div className="flex flex-row pb-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ function ContactPage() {
           </div>
         </div>
         <hr className="border-1 border-gray-500 w-full my-2" />
-        <div className="flex flex-row">
+        <div className="flex flex-row pb-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ function ContactPage() {
           </div>
         </div>
         <hr className="border-1 border-gray-500 w-full my-2" />
-        <div className="flex flex-row">
+        <div className="flex flex-row pb-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
