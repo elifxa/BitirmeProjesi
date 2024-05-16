@@ -34,7 +34,12 @@ export default function Dropbox() {
         return fetch('https://www.beha-tech.com/detect', {
           method: 'POST',
           body: formData,
-        }).then((response) => response.json());
+        }).then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        });
       })
     )
       .then((data) => {
@@ -168,7 +173,7 @@ export default function Dropbox() {
                     <h3 className="text-xl font-bold">Result {index + 1}</h3>
                     <p style={{ fontSize: '16px', whiteSpace: 'pre-wrap' }}>
                       {result.report}
-                    </p>{' '}
+                    </p>
                   </div>
                   <Button
                     onClick={() => downloadPDF(index)}
