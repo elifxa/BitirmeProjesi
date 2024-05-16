@@ -3,6 +3,15 @@
   box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4);
 }
 
+.large-button {
+  font-size: 1.5rem; /* Increase font size */
+  padding: 1rem 2rem; /* Increase padding */
+  width: 100%; /* Make the button full width */
+  max-width: 400px; /* Set a maximum width */
+  display: block; /* Center the button */
+  margin: 1rem auto; /* Add margin for spacing */
+}
+
 .p-fileupload-choose {
   padding: 20px 60px; /* Adjust padding to increase button size */
   background-color: #155e75;

@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
 import { Toast } from 'primereact/toast';
-import { FileUpload } from 'primereact/fileupload';
 import { Button } from 'primereact/button';
 import { ProgressSpinner } from 'primereact/progressspinner';
 import jsPDF from 'jspdf';
@@ -47,7 +46,10 @@ export default function Dropbox() {
 
     Promise.all(
       files.map((file) => {
-        const format = file.type === 'image/heic' ? 'image/jpeg' : 'image/png';
+        const format =
+          file.type === 'image/heic' || file.type === 'image/heif'
+            ? 'image/jpeg'
+            : 'image/png';
         return convertImage(file, format).then((blob) => {
           const formData = new FormData();
           formData.append('image', blob, file.name);
@@ -83,9 +85,9 @@ export default function Dropbox() {
       });
   };
 
-  const onUpload = (event) => {
-    const files = event.files;
-    console.log('Files to upload:', files);
+  const handleCapture = (event) => {
+    const files = Array.from(event.target.files);
+    console.log('Captured files:', files);
     handleFiles(files);
   };
 
@@ -150,19 +152,19 @@ export default function Dropbox() {
         </h2>
         <Toast ref={toast}></Toast>
         <div className="dropbox-container">
-          <FileUpload
-            key={resetKey}
-            name="image"
-            url="https://www.beha-tech.com/detect"
-            multiple
+          <input
+            type="file"
             accept="image/*"
-            maxFileSize={10000000}
-            emptyTemplate={
-              <p className="m-0">Drag and drop files to here to upload.</p>
-            }
-            onUpload={onUpload}
-            chooseLabel="Choose"
-            uploadLabel="Upload"
+            capture="environment"
+            onChange={handleCapture}
+            style={{ display: 'none' }}
+            id="cameraInput"
+          />
+          <Button
+            label="Choose or Take Photo"
+            icon="pi pi-camera"
+            onClick={() => document.getElementById('cameraInput').click()}
+            className="large-button"
           />
         </div>
         {uploading && (
