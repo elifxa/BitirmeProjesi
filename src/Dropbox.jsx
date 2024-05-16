@@ -20,43 +20,42 @@ export default function Dropbox() {
     localStorage.setItem('dropbox_results', JSON.stringify(results));
   }, [results]);
 
-  const onUpload = (event) => {
-    const files = event.files;
-    console.log('Files to upload:', files);
+  const convertImage = (file, format) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = img.width;
+          canvas.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          canvas.toBlob((blob) => {
+            resolve(blob);
+          }, format);
+        };
+        img.src = e.target.result;
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  };
 
+  const handleFiles = (files) => {
     setUploading(true);
 
     Promise.all(
       files.map((file) => {
-        return new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            const img = new Image();
-            img.onload = () => {
-              const canvas = document.createElement('canvas');
-              const ctx = canvas.getContext('2d');
-              canvas.width = img.width;
-              canvas.height = img.height;
-              ctx.drawImage(img, 0, 0);
+        const format = file.type === 'image/heic' ? 'image/jpeg' : 'image/png';
+        return convertImage(file, format).then((blob) => {
+          const formData = new FormData();
+          formData.append('image', blob, file.name);
 
-              // Choose desired format: 'image/png', 'image/jpeg', 'image/heif'
-              const desiredFormat = 'image/png'; // Change format if needed
-              canvas.toBlob((blob) => {
-                const formData = new FormData();
-                formData.append('image', blob, file.name);
-
-                fetch('https://www.beha-tech.com/detect', {
-                  method: 'POST',
-                  body: formData,
-                })
-                  .then((response) => response.json())
-                  .then((data) => resolve(data))
-                  .catch((error) => reject(error));
-              }, desiredFormat);
-            };
-            img.src = e.target.result;
-          };
-          reader.readAsDataURL(file);
+          return fetch('https://www.beha-tech.com/detect', {
+            method: 'POST',
+            body: formData,
+          }).then((response) => response.json());
         });
       })
     )
@@ -82,6 +81,12 @@ export default function Dropbox() {
           detail: 'Failed to Upload Files',
         });
       });
+  };
+
+  const onUpload = (event) => {
+    const files = event.files;
+    console.log('Files to upload:', files);
+    handleFiles(files);
   };
 
   const deleteResult = (index) => {
