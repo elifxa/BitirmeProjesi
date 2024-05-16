@@ -86,8 +86,30 @@ export default function Dropbox() {
       canvas.height = img.height;
       ctx.drawImage(img, 0, 0);
 
-      const imgData = canvas.toDataURL('image/png');
-      doc.addImage(imgData, 'PNG', 10, 20, 90, 90);
+      const imgData = canvas.toDataURL();
+
+      // Determine image format and add accordingly
+      if (imgData.startsWith('data:image/png')) {
+        doc.addImage(imgData, 'PNG', 10, 20, 90, 90);
+      } else if (imgData.startsWith('data:image/jpeg')) {
+        doc.addImage(imgData, 'JPEG', 10, 20, 90, 90);
+      } else if (imgData.startsWith('data:image/heif')) {
+        // HEIF handling - convert to a supported format like PNG
+        const image = new Image();
+        image.src = imgData;
+        image.onload = () => {
+          const heifCanvas = document.createElement('canvas');
+          heifCanvas.width = image.width;
+          heifCanvas.height = image.height;
+          const heifCtx = heifCanvas.getContext('2d');
+          heifCtx.drawImage(image, 0, 0);
+          const heifImgData = heifCanvas.toDataURL('image/png');
+          doc.addImage(heifImgData, 'PNG', 10, 20, 90, 90);
+        };
+      } else {
+        console.error('Unsupported image format');
+      }
+
       doc.text(10, 120, result.report);
 
       // Add date and time to the top right of the page
