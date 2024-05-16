@@ -28,17 +28,35 @@ export default function Dropbox() {
 
     Promise.all(
       files.map((file) => {
-        const formData = new FormData(); // Create a new FormData object for each file
-        formData.append('image', file);
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const img = new Image();
+            img.onload = () => {
+              const canvas = document.createElement('canvas');
+              const ctx = canvas.getContext('2d');
+              canvas.width = img.width;
+              canvas.height = img.height;
+              ctx.drawImage(img, 0, 0);
 
-        return fetch('https://www.beha-tech.com/detect', {
-          method: 'POST',
-          body: formData,
-        }).then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
+              // Choose desired format: 'image/png', 'image/jpeg', 'image/heif'
+              const desiredFormat = 'image/png'; // Change format if needed
+              canvas.toBlob((blob) => {
+                const formData = new FormData();
+                formData.append('image', blob, file.name);
+
+                fetch('https://www.beha-tech.com/detect', {
+                  method: 'POST',
+                  body: formData,
+                })
+                  .then((response) => response.json())
+                  .then((data) => resolve(data))
+                  .catch((error) => reject(error));
+              }, desiredFormat);
+            };
+            img.src = e.target.result;
+          };
+          reader.readAsDataURL(file);
         });
       })
     )
@@ -86,30 +104,8 @@ export default function Dropbox() {
       canvas.height = img.height;
       ctx.drawImage(img, 0, 0);
 
-      const imgData = canvas.toDataURL();
-
-      // Determine image format and add accordingly
-      if (imgData.startsWith('data:image/png')) {
-        doc.addImage(imgData, 'PNG', 10, 20, 90, 90);
-      } else if (imgData.startsWith('data:image/jpeg')) {
-        doc.addImage(imgData, 'JPEG', 10, 20, 90, 90);
-      } else if (imgData.startsWith('data:image/heif')) {
-        // HEIF handling - convert to a supported format like PNG
-        const image = new Image();
-        image.src = imgData;
-        image.onload = () => {
-          const heifCanvas = document.createElement('canvas');
-          heifCanvas.width = image.width;
-          heifCanvas.height = image.height;
-          const heifCtx = heifCanvas.getContext('2d');
-          heifCtx.drawImage(image, 0, 0);
-          const heifImgData = heifCanvas.toDataURL('image/png');
-          doc.addImage(heifImgData, 'PNG', 10, 20, 90, 90);
-        };
-      } else {
-        console.error('Unsupported image format');
-      }
-
+      const imgData = canvas.toDataURL('image/png');
+      doc.addImage(imgData, 'PNG', 10, 20, 90, 90);
       doc.text(10, 120, result.report);
 
       // Add date and time to the top right of the page
