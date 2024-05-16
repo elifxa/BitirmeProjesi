@@ -133,6 +133,8 @@ export default function Dropbox() {
               <p className="m-0">Drag and drop files to here to upload.</p>
             }
             onUpload={onUpload}
+            chooseLabel="Choose"
+            uploadLabel="Upload"
           />
         </div>
         {uploading && (
