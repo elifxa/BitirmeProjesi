@@ -155,7 +155,7 @@ export default function Dropbox() {
           <input
             type="file"
             accept="image/*"
-            capture="environment"
+            capture
             onChange={handleCapture}
             style={{ display: 'none' }}
             id="cameraInput"
