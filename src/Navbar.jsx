@@ -1,7 +1,12 @@
 import 'primereact/resources/themes/arya-blue/theme.css';
 import 'primeicons/primeicons.css';
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from 'react-router-dom';
 import { Menubar } from 'primereact/menubar';
 import HomePage from './Hero';
 import UseProject from './useProject';
@@ -27,6 +32,11 @@ export default function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const navigate = useNavigate(); // Hook for navigation
+  const navigateToHome = () => {
+    navigate('/'); // Navigate to the specified path
+  };
 
   const items = [
     {
@@ -81,12 +91,19 @@ export default function Navbar() {
             marginLeft: '10px', // Ensure the logo stays on the left
           }}
         >
-          <img src={logo} alt="Logo" style={{ height: '60px' }} />
+          <img
+            onClick={navigateToHome}
+            src={logo}
+            alt="Logo"
+            style={{ height: '60px', cursor: 'pointer' }} // Add cursor style here
+          />
           <div
+            onClick={navigateToHome}
             style={{
               display: 'flex',
               flexDirection: 'column', // Stack the text vertically
               alignItems: 'center', // Center the text horizontally
+              cursor: 'pointer', // Add cursor style here
             }}
           >
             <h1 style={{ color: '#f1c40f', fontSize: '14px', margin: '0' }}>
@@ -110,12 +127,12 @@ export default function Navbar() {
           style={{
             backgroundColor: 'transparent',
             flex: '1',
-            justifyContent: 'flex-end', // Align menu items to the right
+            justifyContent: 'flex-end',
           }}
         />
       </div>
       <Routes>
-        <Route path="/" index element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/use-project" element={<UseProject />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/solar-panels" element={<SolarPanelinfo />} />

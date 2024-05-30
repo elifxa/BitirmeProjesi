@@ -36,7 +36,7 @@ function ContactPageHero() {
 
       {/*  */}
 
-      <div>
+      <div className="mt-14">
         <h2 className="text-center text-3xl text-[#042f2e]">
           Frequently Asked Questions
         </h2>

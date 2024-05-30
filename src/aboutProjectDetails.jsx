@@ -86,7 +86,14 @@ function aboutProjectDetails() {
                   API Development )
                 </li>
                 <li className="p-2 list-inside font-medium text-xl">
-                  <span className="font-extrabold">4.</span> FastAPI Framework
+                  <span className="font-extrabold">4.</span> Amazon Web
+                  Server(AWS)
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold">5.</span> Flask
+                </li>
+                <li className="p-2 list-inside font-medium text-xl">
+                  <span className="font-extrabold">6.</span> Flask-mail
                 </li>
               </ul>
             </div>

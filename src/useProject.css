@@ -14,3 +14,8 @@
 .step-card {
   border-top: 4px solid #164e63;
 }
+
+.bordered-div {
+  border-top: 4px solid #164e63;
+  border-bottom: 4px solid #164e63;
+}

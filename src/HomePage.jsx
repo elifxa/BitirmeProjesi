@@ -109,7 +109,7 @@ function HomePage() {
             <h3 className="p-2 flex justify-center items-center lg:text-xl font-semibold">
               Safety
             </h3>
-            <p className="lg:text-base text-center">
+            <p className="text-base text-center">
               Overheating in solar panels poses a fire risk. Detecting and
               mitigating hotspots not only preserves the integrity of your solar
               panels but also enhances safety for your property and surrounding
@@ -132,7 +132,7 @@ function HomePage() {
             <h3 className="p-2 flex justify-center items-center lg:text-xl font-semibold">
               Maximize Energy Output
             </h3>
-            <p className="lg:text-base text-center">
+            <p className="text-base text-center">
               By detecting and resolving hotspots promptly, we ensure that your
               solar panels operate at peak efficiency, maximizing energy
               production and your return on investment.
@@ -154,7 +154,7 @@ function HomePage() {
             <h3 className="p-2 flex justify-center items-center lg:text-xl font-semibold">
               Prevent Damage
             </h3>
-            <p className="lg:text-base text-center">
+            <p className="text-base text-center">
               Hotspots can cause irreparable damage to solar panels if left
               unchecked. Our proactive approach helps prevent long-term damage,
               extending the lifespan of your solar panel system.

@@ -1,8 +1,10 @@
 import { useRef, useState, useEffect } from 'react';
 import { Toast } from 'primereact/toast';
+import { FileUpload } from 'primereact/fileupload';
 import { Button } from 'primereact/button';
 import { ProgressSpinner } from 'primereact/progressspinner';
 import jsPDF from 'jspdf';
+import heic2any from 'heic2any';
 
 import './Dropbox.css';
 
@@ -19,25 +21,42 @@ export default function Dropbox() {
     localStorage.setItem('dropbox_results', JSON.stringify(results));
   }, [results]);
 
-  const convertImage = (file, format) => {
+  const supportedFormats = [
+    'image/jpeg',
+    'image/png',
+    'image/heic',
+    'image/heif',
+  ];
+
+  const convertImage = (file) => {
     return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const img = new Image();
-        img.onload = () => {
-          const canvas = document.createElement('canvas');
-          const ctx = canvas.getContext('2d');
-          canvas.width = img.width;
-          canvas.height = img.height;
-          ctx.drawImage(img, 0, 0);
-          canvas.toBlob((blob) => {
-            resolve(blob);
-          }, format);
+      if (file.type === 'image/heic' || file.type === 'image/heif') {
+        heic2any({ blob: file, toType: 'image/jpeg' })
+          .then((conversionResult) => {
+            resolve(conversionResult);
+          })
+          .catch((error) => {
+            reject(error);
+          });
+      } else {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = new Image();
+          img.onload = () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+            canvas.toBlob((blob) => {
+              resolve(blob);
+            }, 'image/jpeg'); // Always convert to JPEG
+          };
+          img.src = e.target.result;
         };
-        img.src = e.target.result;
-      };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      }
     });
   };
 
@@ -46,11 +65,7 @@ export default function Dropbox() {
 
     Promise.all(
       files.map((file) => {
-        const format =
-          file.type === 'image/heic' || file.type === 'image/heif'
-            ? 'image/jpeg'
-            : 'image/png';
-        return convertImage(file, format).then((blob) => {
+        return convertImage(file).then((blob) => {
           const formData = new FormData();
           formData.append('image', blob, file.name);
 
@@ -80,14 +95,17 @@ export default function Dropbox() {
         toast.current.show({
           severity: 'error',
           summary: 'Error',
-          detail: 'Failed to Upload Files',
+          detail:
+            error.message === 'Unsupported file type'
+              ? 'Unsupported file type. Please upload JPEG or PNG images.'
+              : 'Failed to Upload Files',
         });
       });
   };
 
-  const handleCapture = (event) => {
-    const files = Array.from(event.target.files);
-    console.log('Captured files:', files);
+  const onUpload = (event) => {
+    const files = event.files;
+    console.log('Files to upload:', files);
     handleFiles(files);
   };
 
@@ -144,27 +162,21 @@ export default function Dropbox() {
   return (
     <div>
       <div className="grid grid-cols-1 justify-items-center">
-        <h2
-          className="text-4xl text-center pb-10"
-          style={{ textShadow: '2px 3px 5px gray' }}
-        >
-          SEE RESULTS
-        </h2>
         <Toast ref={toast}></Toast>
         <div className="dropbox-container">
-          <input
-            type="file"
+          <FileUpload
+            key={resetKey}
+            name="image"
+            url="https://www.beha-tech.com/detect"
+            multiple
             accept="image/*"
-            capture
-            onChange={handleCapture}
-            style={{ display: 'none' }}
-            id="cameraInput"
-          />
-          <Button
-            label="Choose or Take Photo"
-            icon="pi pi-camera"
-            onClick={() => document.getElementById('cameraInput').click()}
-            className="large-button"
+            maxFileSize={10000000}
+            emptyTemplate={
+              <p className="m-0">Drag and drop files to here to upload.</p>
+            }
+            onUpload={onUpload}
+            chooseLabel="Choose"
+            uploadLabel="Upload"
           />
         </div>
         {uploading && (
@@ -187,7 +199,7 @@ export default function Dropbox() {
                 />
                 <div className="relative w-full md:w-1/3 pr-4">
                   <img
-                    src={`data:image/png;base64,${result.image}`}
+                    src={`data:image/jpeg;base64,${result.image}`}
                     alt={`Result ${index}`}
                     className="w-full h-auto mb-4"
                     style={{ width: '100%', maxHeight: '300px' }}

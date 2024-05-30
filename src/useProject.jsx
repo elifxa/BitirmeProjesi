@@ -62,9 +62,40 @@ export default function useProject() {
         </div>
       </div>
 
-      <div className=" ">
+      <div className="grid lg:grid-cols-2 gap-4 justify-items-center lg:mt-16 lg:mb-16 mt-8 mb-8 pt-12 pb-6 bg-slate-200 bordered-div">
+        <div>
+          <h3
+            className="text-4xl pb-6 font-medium text-[#042f2e] text-center"
+            style={{ fontFamily: 'Kalam, sans-serif' }}
+          >
+            If you want to check your panel in real time,
+          </h3>
+          <h3
+            className="text-4xl font-medium text-[#042f2e] text-center pb-6"
+            style={{ fontFamily: 'Kalam, sans-serif' }}
+          >
+            Click the button!
+          </h3>
+        </div>
+        <div>
+          <button
+            className="bg-[#082f49] hover:bg-[#155e75] text-white text-2xl font-bold py-6 px-8 lg:py-6 lg:px-12 rounded-2xl outline outline-[#164e63] whitespace-nowrap "
+            onClick={() => window.open('https://www.beha-tech.com/', '_blank')}
+          >
+            Go to Panel
+          </button>
+        </div>
+      </div>
+
+      <div className="pt-10">
         <div className="grid justify-center justify-items-center md:grid-cols-6 gap-4 ">
           <div className="md:col-start-2 col-span-4">
+            <h2
+              className="text-4xl text-center pb-10"
+              style={{ textShadow: '2px 3px 5px gray' }}
+            >
+              UPLOAD AND SEE RESULTS
+            </h2>
             <Dropbox />
           </div>
         </div>

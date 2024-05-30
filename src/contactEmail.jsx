@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -140,10 +141,12 @@ export default function ContactEmail() {
           error={errors.message}
           helperText={errors.message}
         />
+
         <Button
           variant="contained"
           onClick={handleSubmit}
-          sx={{ mt: 2, p: '12px 24px', fontSize: '1rem' }}
+          endIcon={<SendIcon />}
+          sx={{ p: '12px 24px', fontSize: '1rem' }}
         >
           Send
         </Button>
